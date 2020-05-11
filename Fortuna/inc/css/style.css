@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'goth_local';
+    src: local("Old English Text MT"),
+         local("OldEnglishTextMT");         
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texturamodern';
+    src: url('../font/textura_modern-webfont.woff2') format('woff2'),
+         url('../font/textura_modern-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gondola_sdregular';
+    src: url('../font/Gondola_SD-webfont.eot');
+    src: url('../font/Gondola_SD-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Gondola_SD-webfont.woff') format('woff'),
+         url('../font/Gondola_SD-webfont.ttf') format('truetype'),
+         url('../font/Gondola_SD-webfont.svg#gondola_sdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kingthings_flourishesregular';
+    src: url('../font/Kingthings_Flourishes-webfont.eot');
+    src: url('../font/Kingthings_Flourishes-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Kingthings_Flourishes-webfont.woff2') format('woff2'),
+         url('../font/Kingthings_Flourishes-webfont.woff') format('woff'),
+         url('../font/Kingthings_Flourishes-webfont.ttf') format('truetype'),
+         url('../font/Kingthings_Flourishes-webfont.svg#kingthings_flourishesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*constantes pour le parchemin*/
+:root {
+    --parch-coul: linen;
+    --revers-coul: burlywood;
+    --interm-coul: #E8CCA9;
+    --txt-coul: black;
+    --hauteur: 15rem;
+    --largeur: 40rem;
+    --rayon: 1.5rem;
+    --diametre: calc(var(--rayon) * 2);
+    --milieu: calc(var(--hauteur) / 2);
+    --txt-pos: calc( var(--milieu) - var(--rayon));
+}
+
+
+/*----------Mise en forme globale----------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	background: #f4e0d4 url("../img/fondclair.png") repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    padding: 0 5%;
+}
+
+p{
+	font-size: 2em;
+	color: black;
+}
+
+.retour{
+	color: black;
+	text-decoration: none;
+}
+h2{
+	color: black;
+	font-size: 3em;
+}
+.separation{
+	font-family: 'kingthings_flourishesregular';
+	font-size: 4em;
+	text-align: center;
+}
+
+.txtEtImg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	align-items: center;
+    margin: 0.5em;
+}
+
+.txtImgTxt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+	align-items: center;
+    margin: 0.5em;
+}
+
+.imgG, .imgD, .imgC .txtD, txtG{
+    display: inline;
+    margin: 0.5em;
+}
+
+/*.txtG{
+    text-align: right;
+}*/
+
+.txtD{
+    text-align: left;
+}
+
+
+/*----------Mise en forme du header----------*/
+
+header img{
+	width: 100%;
+    max-width: 171px;
+    /*max-width: 100%;
+    height: auto;*/
+    object-fit: scale-down;
+	padding-top: 0.3em;
+	display: inline;
+}
+
+header figcaption{
+    font-size: 1em;
+    font-family: 'gondola_sdregular';
+}
+/*
+header {
+    height: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+*/
+header{
+	
+	margin: auto;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+#caselogo{
+	width: 10%;
+	text-align: center;
+	display: inline;
+    
+}
+
+#casetitre {
+    text-align: center;
+    display: inline;
+    
+}
+
+#pageactuelle{
+	text-align: center;
+    display: inline;
+    font-size: 2em;
+}
+
+h1{
+	font-family: 'goth_local', 'texturamodern';
+	font-weight: normal;
+   	font-style: normal;
+	font-size: 12em;
+	padding: 0;
+	margin: 0;
+}
+
+#devise{
+	font-family: 'gondola_sdregular';
+	font-size: 3em;
+	padding: 0;
+	margin: 0;
+	color: black;
+}
+
+
+/*----------Mise en forme du parchemin---------------*/
+.parcheminVertical, .rouleauHaut, .rouleauBas, .cacheRondHaut, .cacheRondBas{
+    font-size: 2em;
+    background-color: var(--parch-coul);
+    border: 1px solid black;
+    border-radius: var(--rayon);
+}
+
+.parcheminVertical{
+    background-image: linear-gradient(var(--revers-coul), var(--interm-coul) var(--diametre), var(--parch-coul) 50%,var(--interm-coul) calc(100% - var(--diametre)), var(--revers-coul));
+    height: var(--hauteur);
+    width: var(--largeur);
+    line-height: 100%;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    animation-name: ouverture;
+    animation-duration: 1s;
+    -o-animation-name: ouverture;
+    -o-animation-duration: 1s;
+    -moz-animation-name: ouverture;
+    -moz-animation-duration: 1s;
+    -webkit-animation-name: ouverture;
+    -webkit-animation-duration: 1s;
+}
+
+@keyframes ouverture {
+    from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur))
+    }
+}
+
+-o-@keyframes ouverture {
+    from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur)
+    }
+}
+
+-moz-@keyframes ouverture {
+    from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur)
+    }
+}
+
+-webkit-@keyframes ouverture {
+    from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur)
+    }
+}
+
+.parcheminVertical > p{
+    color: --txt-coul;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
+.rouleauHaut, .rouleauBas{
+    background-color: var(--revers-coul);
+    width: var(--largeur);
+    height: var(--diametre);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+    position: absolute;
+    left: calc(var(--rayon) - 1px );
+}
+
+.rouleauHaut{
+    background-image: linear-gradient(var(--parch-coul), var(--revers-coul));
+    top: -1px;
+}
+
+.rouleauBas{
+    background-image: linear-gradient(var(--revers-coul), var(--parch-coul));
+    bottom: -1px;
+}
+
+.cacheRondHaut, .cacheRondBas{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: var(--rayon);
+    height: var(--diametre);
+    border-left: none;
+    position: absolute;
+    left: calc(var(--rayon) - 1px);
+}
+
+.cacheRondHaut{
+    background-image: linear-gradient(var(--revers-coul), var(--interm-coul));
+    top: -1px;
+}
+
+.cacheRondBas{
+    background-image: linear-gradient(var(--interm-coul), var(--revers-coul));
+    bottom: -1px;
+}
+
+/*----------Mise en forme du menu principal----------*/
+#principal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#006600;
+	border-radius: 5px;
+}
+
+#principal li {
+    float: left;
+    border-right: 1px solid #ffdd44;
+}
+
+#principal li:last-child {
+    border: none;
+}
+
+
+#principal a {
+    display: block;
+    color: #ffdd44;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+}
+
+
+
+#principal li a:hover,
+#principal li a:focus {
+    background-color: #ffdd44;
+    color: #006600;
+    text-decoration: underline;
+}
+
+/*----------Mise en forme de l'équipe----------*/
+.bio{
+	vertical-align: top;
+    width: 70%;
+    padding: 1em;
+    display: inline-block;
+}
+
+.portrait{
+	display: inline-block;
+	border-width: 10px;
+	border-color: #995D43;
+	border-style: groove ridge groove groove;
+	border-radius: 50% 50% 0 0;
+	width: 20%;
+	margin: 1em;
+}
+
+/*----------Mise en forme des photos de démonstration----------*/
+.demo{
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 95%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.exemple{
+	margin: 0.5%;
+	border: 5px groove #995D43;
+	height: 11em;
+}
+
+/*----------Mise en forme de l'actualité----------*/
+.para{
+	vertical-align: top;
+    width: 50%;
+    padding: 1em;
+    display: inline-block;
+}
+
+.photo{
+	display: inline-block;
+	border: 5px groove #995D43;
+	width: 40%;
+	margin: 1em;
+}
+
+/*----------Mise en forme de l'historique----------*/
+.centrale{
+	display: block;
+	width: 25%;
+	margin: auto;
+	padding: 1%;
+}
+
+/*----------Mise en forme des contacts----------*/
+main > article > section > dl{
+	font-size: 2em;
+	color: black;
+}
+
+main > article > section > dl > dt{
+    font-weight: bold;
+}
+
+main > article > section > dl > dd{
+    text-align: right;
+    padding-bottom: 1em;
+}
+
+main > article > section > dl > dd:last-child{
+    padding-bottom: 0;
+}
+
+
+main > article > section > dl > dt:after{
+    content: ":";
+}
+
+
+/*----------Mise en forme du pied de page----------*/
+
+#menufin {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    text-align: center;
+    background-color: #ffdd44;
+    border-radius: 15px;
+    width: 30%;
+}
+
+#menufin li {
+    display: inline;
+    list-style-type: none;
+}
+
+#menufin a {
+    display: inline-block;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 12px 16px;
+}
+
+#menufin li a:hover {
+    background-color: #006600;
+    color: white;
+    text-decoration: underline;
+}
