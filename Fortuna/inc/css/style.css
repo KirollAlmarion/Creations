@@ -67,19 +67,14 @@ body {
     padding: 0 5%;
 }
 
-p{
-	font-size: 2em;
-	color: black;
-}
+p{color: black}
 
 .retour{
 	color: black;
 	text-decoration: none;
 }
-h2{
-	color: black;
-	font-size: 3em;
-}
+h2{color: black}
+
 .separation{
 	font-family: 'kingthings_flourishesregular';
 	font-size: 4em;
@@ -129,19 +124,9 @@ header img{
 }
 
 header figcaption{
-    font-size: 1em;
     font-family: 'gondola_sdregular';
 }
-/*
-header {
-    height: 1%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-start;
-}
-*/
+
 header{
 	
 	margin: auto;
@@ -154,14 +139,13 @@ header{
 #caselogo{
 	width: 10%;
 	text-align: center;
-	display: inline;
-    
+	display: inline;    
 }
 
 #casetitre {
     text-align: center;
     display: inline;
-    
+    /*max-width: 100%;*/
 }
 
 #pageactuelle{
@@ -174,14 +158,12 @@ h1{
 	font-family: 'goth_local', 'texturamodern';
 	font-weight: normal;
    	font-style: normal;
-	font-size: 12em;
 	padding: 0;
 	margin: 0;
 }
 
 #devise{
 	font-family: 'gondola_sdregular';
-	font-size: 3em;
 	padding: 0;
 	margin: 0;
 	color: black;
@@ -303,43 +285,16 @@ h1{
     bottom: -1px;
 }
 
-/*----------Mise en forme du menu principal----------*/
-#principal {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:#006600;
-	border-radius: 5px;
-}
 
-#principal li {
-    float: left;
-    border-right: 1px solid #ffdd44;
-}
-
-#principal li:last-child {
-    border: none;
-}
-
-
-#principal a {
-    display: block;
-    color: #ffdd44;
-    font-family: sans-serif;
-    text-decoration: none;
-    text-align: center;
-    padding: 8px 16px;
-}
-
-
-
-#principal li a:hover,
-#principal li a:focus {
-    background-color: #ffdd44;
-    color: #006600;
-    text-decoration: underline;
-}
+/*----------Mise en forme du bandeau de navigation-----------*/
+#bandeau{
+        background-color:#006600;
+        border-radius: 5px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        
+    }
 
 /*----------Mise en forme de l'équipe----------*/
 .bio{
@@ -457,4 +412,141 @@ main > article > section > dl > dt:after{
     background-color: #006600;
     color: white;
     text-decoration: underline;
+}
+
+/*media queries*/
+
+/*grand écran*/
+@media screen and (min-width:768px) {
+    /*----------Mise en forme globale----------*/
+    h2{font-size: 3em}
+    p{font-size: 2em}
+    /*----------Mise en forme du header----------*/
+    h1{font-size: 12em}
+    #devise{font-size: 3em}
+    header figcaption{font-size: 1em}
+    /*----------Mise en forme du menu principal----------*/        
+    nav {
+        
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    nav a {
+        color: #ffdd44;
+        font-family: sans-serif;
+        text-decoration: none;
+        text-align: center;
+        padding: .5em;
+        border-right: 1px solid #ffdd44;
+    }
+
+    nav a:first-child {
+        display: none;
+    }
+    
+    nav a:last-child {
+        border: none;
+    }
+
+    nav a:hover, nav a:focus {
+        background-color: #ffdd44;
+        color: #006600;
+        text-decoration: underline;
+    }
+    
+    #deplie, #replie{
+        display:none;
+    }
+    
+}
+
+/* tablette et smartphone XL*/
+@media screen and (min-width:768px) and (max-width:991px) {
+    /*----------Mise en forme du menu principal----------*/
+    nav a {
+        width: 25%;
+        border-bottom: 1px solid #ffdd44;
+    }
+    
+    nav a:nth-child(5) {
+        border-right: none;
+    }
+    
+    nav a:nth-child(6), nav a:nth-child(7), nav a:nth-child(8) {
+        border-bottom: none;
+    }
+
+   
+}
+
+/* smartphone S*/
+@media screen and (max-width:767px){
+    /*----------Mise en forme du header----------*/
+    
+    .parcheminVertical{
+        display: none;
+    }
+    
+    /*----------Mise en forme du menu principal----------*/
+    #deplie, #replie{
+        font-size: 2em;
+    }
+    
+    #bandeau > a{
+        padding: .5em;
+        text-decoration: none;
+        color: #ffdd44;
+        font-family: sans-serif;
+    }
+        
+    nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #006600;
+    border-radius: 0 0 10px 10px;
+}
+
+    nav a {
+        color: #ffdd44;
+        font-family: sans-serif;
+        text-decoration: none;
+        text-align: center;
+        padding: .5em;
+    }
+
+    #menu:target{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav > a:first-child{
+        align-self: flex-start;
+    }
+}
+
+@media screen and (min-width:575px) and (max-width:767px){
+    /*----------Mise en forme globale----------*/
+    h2{	font-size: 2.5em}
+    p{font-size: 1.5em}
+    /*----------Mise en forme du header----------*/
+    h1{font-size: 10em}
+    #devise{font-size: 2.5em}
+    header figcaption{font-size: .5em}
+}
+
+/* smartphone XS */
+@media screen and (max-width:575px){
+    /*----------Mise en forme globale----------*/
+    h2{	font-size: 1.5em}
+    p{font-size: 1em}
+    /*----------Mise en forme du header----------*/
+    h1{font-size: 6em}
+    #devise{font-size: 1.5em}
+    header figcaption{font-size: .5em}
 }
