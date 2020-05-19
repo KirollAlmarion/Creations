@@ -54,9 +54,9 @@
 
 
 /*----------Mise en forme globale----------*/
-* {
+* {    
+    /*padding: 0;*/
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -74,6 +74,11 @@ p{color: black}
 	text-decoration: none;
 }
 h2{color: black}
+
+.titres{
+    list-style-type: circle;
+    margin: 0;
+}
 
 .separation{
 	font-family: 'kingthings_flourishesregular';
@@ -296,22 +301,100 @@ h1{
         
     }
 
-/*----------Mise en forme de l'équipe----------*/
-.bio{
-	vertical-align: top;
-    width: 70%;
-    padding: 1em;
-    display: inline-block;
+/*----------Mise en forme du carrousel----------*/
+.carrousel{
+	margin: 1em auto;
+    width: 100%;
+    max-width: 628px;
+    height: 50vh;
+    max-height: 471px;
+    background-size: auto;
+    border: 10px inset linen;
 }
 
-.portrait{
-	display: inline-block;
-	border-width: 10px;
-	border-color: #995D43;
-	border-style: groove ridge groove groove;
-	border-radius: 50% 50% 0 0;
-	width: 20%;
-	margin: 1em;
+/*----------Mise en forme du carrousel médiéval----------*/
+#medieval{
+    background: url(../img/carrousel-med/carrousel1.jpg) 0 0 no-repeat #f4e0d4;
+    animation: 12s linear 0s infinite normal img_med;
+    -o-animation: 12s linear 0s infinite normal img_med;
+    -moz-animation: 12s linear 0s infinite normal img_med;
+    -webkit-animation: 12s linear 0s infinite normal img_med;
+}
+
+@keyframes img_med {
+    0% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+    10% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+
+    20% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+    30% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+
+    40% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+    50% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+
+    60% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+    70% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+
+    80% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    90% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    
+    100% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+}
+
+-o-@keyframes img_med {
+    0% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+    10% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+
+    20% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+    30% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+
+    40% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+    50% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+
+    60% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+    70% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+
+    80% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    90% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    
+    100% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+}
+
+-moz-@keyframes img_med {
+    0% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+    10% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+
+    20% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+    30% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+
+    40% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+    50% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+
+    60% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+    70% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+
+    80% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    90% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    
+    100% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+}
+
+-webkit-@keyframes img_med {
+    0% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+    10% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
+
+    20% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+    30% {background-image: url(../img/carrousel-med/carrousel2.jpg)}
+
+    40% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+    50% {background-image: url(../img/carrousel-med/carrousel3.jpg)}
+
+    60% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+    70% {background-image: url(../img/carrousel-med/carrousel4.jpg)}
+
+    80% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    90% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
+    
+    100% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
 }
 
 /*----------Mise en forme des photos de démonstration----------*/
@@ -421,6 +504,7 @@ main > article > section > dl > dt:after{
     /*----------Mise en forme globale----------*/
     h2{font-size: 3em}
     p{font-size: 2em}
+    .titres{padding: 2em;font-size: 2em}
     /*----------Mise en forme du header----------*/
     h1{font-size: 12em}
     #devise{font-size: 3em}
@@ -534,6 +618,7 @@ main > article > section > dl > dt:after{
     /*----------Mise en forme globale----------*/
     h2{	font-size: 2.5em}
     p{font-size: 1.5em}
+    .titres{padding: 1.5em;font-size: 1.5em}
     /*----------Mise en forme du header----------*/
     h1{font-size: 10em}
     #devise{font-size: 2.5em}
@@ -545,6 +630,7 @@ main > article > section > dl > dt:after{
     /*----------Mise en forme globale----------*/
     h2{	font-size: 1.5em}
     p{font-size: 1em}
+    .titres{padding: 1em;font-size: 1em}
     /*----------Mise en forme du header----------*/
     h1{font-size: 6em}
     #devise{font-size: 1.5em}
