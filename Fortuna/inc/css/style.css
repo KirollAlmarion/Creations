@@ -109,7 +109,8 @@ hr {
 }
 
 hr:after {
-    content: "\02619 \0214F \02767";
+    /*content: "\02619 \0214F \02767";*/
+    content: "\02619 \0226C \02767";
     padding: 1em;
     /*background: #fff;
     position: relative;
@@ -310,9 +311,12 @@ h1{
     background-size: auto;
     border: 10px inset linen;
     transition: background 1s linear 0s;
+    -o-transition: background 1s linear 0s;
+    -moz-transition: background 1s linear 0s;
+    -webkit-transition: background 1s linear 0s;
 }
 
-/*----------Mise en forme du carrousel médiéval----------*/
+/*----------Mise en forme du carrousel médiéval----------
 #medieval{
     background: url(../img/carrousel-med/carrousel1.jpg) 0 0 no-repeat #f4e0d4;
     animation: 12s linear 0s infinite normal img_med;
@@ -395,7 +399,7 @@ h1{
     90% {background-image: url(../img/carrousel-med/carrousel5.jpg)}
     
     100% {background-image: url(../img/carrousel-med/carrousel1.jpg)}
-}
+}*/
 
 /*----------Mise en forme des photos de démonstration----------*/
 .demo{
