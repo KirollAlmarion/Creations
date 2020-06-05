@@ -1,0 +1,58 @@
+:root{
+    --hauteur: 13em;    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+i{
+    font-size: 2em
+}
+
+header{
+    background-color: black;
+    color: white;
+    position:relative;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+    height: 0;
+    transition: height 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+}
+
+nav > p{
+    padding: .5em;
+}
+
+nav > p:first-child{
+    padding-top: 0;
+}
+
+#menu:target{
+    
+    z-index: 1;
+    height: var(--hauteur);
+    transition: height 1s;
+}
+
+nav > a:first-child{
+    align-self: flex-start;
+}

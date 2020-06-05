@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+i{
+    font-size: 2em
+}
+
+header{
+    background-color: black;
+    color: white;
+    position:relative;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+
+nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    border-radius: 0 0 10px 10px;
+}
+
+nav > p{
+    padding: .5em;
+}
+
+nav > p:first-child{
+    padding-top: 0;
+}
+
+/*#deplie:target{
+    display: none;
+}*/
+
+#menu:target{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav > a:first-child{
+    align-self: flex-start;
+}

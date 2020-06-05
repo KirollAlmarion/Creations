@@ -1,0 +1,142 @@
+:root {
+    /*--parch-coul: floralwhite;
+    --revers-coul: linen;*/
+    --parch-coul: linen;
+    --revers-coul: burlywood;
+    --fonce-coul: #dbaf75;
+    --interm-coul: #E8CCA9;
+    --txt-coul: black;
+    --hauteur: 10em;
+    --largeur: 20em;
+    --rayon: 1em;
+    --diametre: calc(var(--rayon) * 2);
+    --milieu: calc(var(--hauteur) / 2);
+    --txt-pos: calc( var(--milieu) - var(--rayon));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.parcheminVertical, .rouleauHaut, .rouleauBas, .cacheRondHaut, .cacheRondBas{
+    background-color: var(--parch-coul);
+    border: 1px solid black;
+    border-radius: var(--rayon);
+}
+
+.parcheminVertical{
+    background-image: linear-gradient(var(--revers-coul), var(--interm-coul) var(--diametre), var(--parch-coul) 50%,var(--interm-coul) calc(100% - var(--diametre)), var(--revers-coul));
+    height: var(--hauteur);
+    width: var(--largeur);
+    line-height: 100%;
+    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    animation-name: ouverture;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    -o-animation-name: ouverture;
+    -o-animation-timing-function: linear;
+    -o-animation-duration: 1s;
+    -moz-animation-name: ouverture;
+    -moz-animation-timing-function: linear;
+    -moz-animation-duration: 1s;
+    -webkit-animation-name: ouverture;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 1s;
+}
+
+@keyframes ouverture {
+    from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur)
+    }
+}
+
+-o-@keyframes ouverture {
+     from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur)
+    }
+}
+
+-moz-@keyframes ouverture {
+     from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur)
+    }
+}
+
+-webkit-@keyframes ouverture {
+     from {
+        height: calc(var(--diametre) * 2 )
+    }
+
+    to {
+        height: var(--hauteur)
+    }
+}
+
+.parcheminVertical > p{
+    color: --txt-coul;
+    /*line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;*/
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.rouleauHaut, .rouleauBas{
+    background-color: var(--revers-coul);
+    width: var(--largeur);
+    height: var(--diametre);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+    position: absolute;
+    left: calc(var(--rayon) - 1px );
+}
+
+.rouleauHaut{
+    background-image: linear-gradient(var(--parch-coul), var(--revers-coul));
+    top: -1px;
+}
+
+.rouleauBas{
+    background-image: linear-gradient(var(--revers-coul), var(--parch-coul));
+    bottom: -1px;
+}
+
+.cacheRondHaut, .cacheRondBas{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: var(--rayon);
+    height: var(--diametre);
+    border-left: none;
+    position: absolute;
+    left: calc(var(--rayon) - 1px);
+}
+
+.cacheRondHaut{
+    background-image: linear-gradient(var(--revers-coul), var(--interm-coul));
+    top: -1px;
+}
+
+.cacheRondBas{
+    background-image: linear-gradient(var(--interm-coul), var(--revers-coul));
+    bottom: -1px;
+}

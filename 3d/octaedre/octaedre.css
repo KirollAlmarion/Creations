@@ -1,0 +1,110 @@
+:root {
+    --couleur-fond: aquamarine;
+    --txt-coul: black;
+    --arete: 400px;
+    --moitie: calc(var(--arete) / 2);
+    --hauteur: calc(var(--arete) * .866);
+    --centre: calc(var(--hauteur) / 2);
+    --apex: calc(var(--arete) / 1.4142);
+    --basal: calc(var(--apex) - var(--moitie));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--couleur-fond);
+}
+
+.scene{
+    width: var(--arete);
+    height: calc(var(--hauteur) * 2);
+    margin: auto;
+    margin-top: calc(50vh - var(--hauteur));
+    transform-style: preserve-3d;
+    /*perspective: 1000px;*/
+    perspective-origin: center;
+}
+
+.pyramide{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    animation: mouvement 5s linear infinite;
+    -o-animation: mouvement 5s linear infinite;
+    -moz-animation: mouvement 5s linear infinite;
+    -webkit-animation: mouvement 5s linear infinite;
+}
+
+.face{
+    width: var(--arete);
+    height: var(--hauteur);
+    position: absolute;
+    background-image: url(equilateral.svg);
+    background-size: contain;
+    transform-origin: 50% 100%;
+}
+
+#hn{
+    opacity: 0.4;
+    transform: translateZ(calc(var(--moitie) * -1)) rotateY(180deg) rotateX(35.265deg);
+}
+
+#hs{
+    opacity: 0.2;
+    transform: translateZ(var(--moitie)) rotateX(35.265deg);
+}
+
+#he{
+    opacity: 0.3;
+    transform: rotateY(90deg) translateZ(var(--moitie)) rotateX(35.265deg);
+}
+
+#ho{
+    opacity: 0.1;
+    transform: rotateY(-90deg) translateZ(var(--moitie)) rotateX(35.265deg);
+}
+
+#bn{
+    opacity: 0.8;
+    transform: translateZ(calc(var(--moitie) * -1)) rotateX(-144.735deg);
+}
+
+#bs{
+    opacity: 0.6;
+    transform: translateZ(calc(var(--moitie) * 1)) rotateY(180deg) rotateX(-144.735deg);
+}
+
+#be{
+    opacity: 0.7;
+    transform: rotateY(-90deg) translateZ(calc(var(--moitie) * -1)) rotateX(-144.735deg);
+}
+
+#bo{
+    opacity: 0.5;
+    transform: rotateY(90deg) translateZ(calc(var(--moitie) * -1)) rotateX(-144.735deg);
+}
+
+@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
+
+-o-@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
+
+-moz-@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
+
+-webkit-@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}

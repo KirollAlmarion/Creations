@@ -1,0 +1,98 @@
+:root {
+    --couleur-fond: darkgoldenrod;
+    --arete: 500px;
+    --moitie: calc(var(--arete) / 2);
+    --hauteur: calc(var(--arete) * .866);
+    --centre: calc(var(--hauteur) / 2);
+    --apex: calc(var(--arete) / 1.4142);
+    --basal: calc(var(--apex) - var(--moitie));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--couleur-fond);
+}
+
+.scene{
+    width: var(--arete);
+    height: var(--hauteur);
+    margin: auto;
+    margin-top: calc(50vh - var(--centre));
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: center;
+}
+
+.pyramide{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    transform: rotateX(-90deg);
+    animation: mouvement 10s linear infinite;
+    -o-animation: mouvement 10s linear infinite;
+    -moz-animation: mouvement 10s linear infinite;
+    -webkit-animation: mouvement 10s linear infinite;
+}
+
+.base{
+    width: var(--arete);
+    height: var(--arete);
+    background-color: beige;
+    transform-origin: 50% 50%;
+    transform: translateY(var(--basal)) rotateX(-90deg);
+}
+
+.face{
+    width: var(--arete);
+    height: var(--hauteur);
+    position: absolute;
+    background-image: url(equilateral.svg);
+    background-size: contain;
+    transform-origin: 50% 0;
+}
+
+#nord{
+    opacity: 0.8;
+    transform: rotateY(180deg) rotateX(35.265deg);
+}
+
+#sud{
+    opacity: 0.2;
+    transform: rotateX(35.265deg);
+}
+
+#est{
+    opacity: 0.4;
+    transform: rotateY(90deg) rotateX(35.265deg);
+}
+
+#ouest{
+    opacity: 0.6;
+    transform: rotateY(-90deg) rotateX(35.265deg);
+}
+
+@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
+
+-o-@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
+
+-moz-@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
+
+-webkit-@keyframes mouvement{
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
