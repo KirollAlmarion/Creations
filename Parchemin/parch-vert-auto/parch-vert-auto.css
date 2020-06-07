@@ -60,7 +60,7 @@
     }
 }
 
--o-@keyframes ouverture {
+@-o-keyframes ouverture {
      from {
         height: calc(var(--diametre) * 2 )
     }
@@ -70,7 +70,7 @@
     }
 }
 
--moz-@keyframes ouverture {
+@-moz-keyframes ouverture {
      from {
         height: calc(var(--diametre) * 2 )
     }
@@ -80,7 +80,7 @@
     }
 }
 
--webkit-@keyframes ouverture {
+@-webkit-keyframes ouverture {
      from {
         height: calc(var(--diametre) * 2 )
     }

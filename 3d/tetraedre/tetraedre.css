@@ -89,17 +89,17 @@ p{
     to{transform: rotateY(360deg)}
 }
 
--o-@keyframes mouvement{
+@-o-keyframes mouvement{
     from{transform: rotateY(0deg)}
     to{transform: rotateY(360deg)}
 }
 
--moz-@keyframes mouvement{
+@-moz-keyframes mouvement{
     from{transform: rotateY(0deg)}
     to{transform: rotateY(360deg)}
 }
 
--webkit-@keyframes mouvement{
+@-webkit-keyframes mouvement{
     from{transform: rotateY(0deg)}
     to{transform: rotateY(360deg)}
 }
