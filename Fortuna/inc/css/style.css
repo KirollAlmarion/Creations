@@ -160,7 +160,7 @@ header{
     font-size: 2em;
 }
 
-h1{
+#casetitre > p:first-child{
 	font-family: 'goth_local', 'texturamodern';
 	font-weight: normal;
    	font-style: normal;
@@ -168,11 +168,19 @@ h1{
 	margin: 0;
 }
 
+h1{
+	color: --txt-coul;
+    font-weight: normal;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
 #devise{
 	font-family: 'gondola_sdregular';
 	padding: 0;
 	margin: 0;
-	color: black;
+	color: --txt-coul;
 }
 
 
@@ -241,13 +249,6 @@ h1{
     to {
         height: var(--hauteur)
     }
-}
-
-.parcheminVertical > p{
-    color: --txt-coul;
-    position: absolute;
-    top: 45%;
-    left: 10%;
 }
 
 .rouleauHaut, .rouleauBas{
@@ -406,12 +407,16 @@ h1{
 	display: flex;
 	flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
     width: 95%;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+    align-items: center;
+}
+
+.demo > figure > figcaption{
+    text-align: center;
 }
 
 .exemple{
@@ -510,7 +515,7 @@ main > article > section > dl > dt:after{
     h3, p{font-size: 2em}
     .titres{padding: 2em;font-size: 2em}
     /*----------Mise en forme du header----------*/
-    h1{font-size: 12em}
+    #casetitre > p:first-child{font-size: 12em}
     #devise{font-size: 3em}
     header figcaption{font-size: 1em}
     /*----------Mise en forme du menu principal----------*/        
@@ -624,7 +629,7 @@ main > article > section > dl > dt:after{
     h3, p{font-size: 1.5em}
     .titres{padding: 1.5em;font-size: 1.5em}
     /*----------Mise en forme du header----------*/
-    h1{font-size: 10em}
+    #casetitre > p:first-child{font-size: 10em}
     #devise{font-size: 2.5em}
     header figcaption{font-size: .5em}
 }
@@ -636,7 +641,7 @@ main > article > section > dl > dt:after{
     h3, p{font-size: 1em}
     .titres{padding: 1em;font-size: 1em}
     /*----------Mise en forme du header----------*/
-    h1{font-size: 6em}
+    #casetitre > p:first-child{font-size: 6em}
     #devise{font-size: 1.5em}
     header figcaption{font-size: .5em}
 }
