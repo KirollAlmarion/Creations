@@ -1,0 +1,603 @@
+:root {
+    --cote: 200px;
+    --moitie: calc(var(--cote) / 2);
+    --hauteur: calc(var(--cote) * 0.866);
+    --delta: calc(var(--cote) - var(--hauteur));
+    --epaisseur: calc(var(--cote) / 10);
+    --milieu: calc(var(--epaisseur) / 2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    background-attachment: fixed;
+    overflow: hidden;
+    animation-name: activation, lumiere-blanche, lumiere-coloree, arc-en-ciel;
+    animation-delay: 15s, 17s, 18s, 20s;
+    animation-duration: 0.1s, 1s, 2s, 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards, forwards, forwards, forwards;
+    animation-iteration-count: 10, 1, 1, infinite;
+    -o-animation-name: activation, lumiere-blanche, lumiere-coloree, arc-en-ciel;
+    -o-animation-delay: 15s, 17s, 18s, 20s;
+    -o-animation-duration: 0.1s, 1s, 2s, 2s;
+    -o-animation-timing-function: linear;
+    -o-animation-fill-mode: backwards, forwards, forwards, forwards;
+    -o-animation-iteration-count: 10, 1, 1, infinite;
+    -moz-animation-name: activation, lumiere-blanche, lumiere-coloree, arc-en-ciel;
+    -moz-animation-delay: 15s, 17s, 18s, 20s;
+    -moz-animation-duration: 0.1s, 1s, 2s, 2s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-fill-mode: backwards, forwards, forwards, forwards;
+    -moz-animation-iteration-count: 10, 1, 1, infinite;
+    -webkit-animation-name: activation, lumiere-blanche, lumiere-coloree, arc-en-ciel;
+    -webkit-animation-delay: 15s, 17s, 18s, 20s;
+    -webkit-animation-duration: 0.1s, 1s, 2s, 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards, forwards, forwards, forwards;
+    -webkit-animation-iteration-count: 10, 1, 1, infinite;
+}
+
+/*contient une Triforce*/
+.scene{
+    width: var(--cote);
+    height: var(--cote);
+    position: absolute;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: center;
+}
+
+/*les positions et animations des Triforces par ordre d'arrivée*/
+#nayru{
+    top: calc(50vh - var(--delta));
+    left: calc(50% - var(--cote));
+    animation: deplacement-nayru 5s ease-out 1;
+    -o-animation: deplacement-nayru 5s ease-out 1;
+    -moz-animation: deplacement-nayru 5s ease-out 1;
+    -webkit-animation: deplacement-nayru 5s ease-out 1;
+}
+
+#farore{
+    left: 75%;
+    top: calc(var(--cote) + 100vh);
+    animation: 5s ease-out 5s 1 forwards deplacement-farore;
+    -o-animation: 5s ease-out 5s 1 forwards deplacement-farore;
+    -moz-animation: 5s ease-out 5s 1 forwards deplacement-farore;
+    -webkit-animation: 5s ease-out 5s 1 forwards deplacement-farore;
+}
+
+#din{
+    left: calc(50% - var(--moitie));
+    top: calc(-1px - var(--cote));
+    animation: 5s ease-out 10s 1 forwards deplacement-din;
+    -o-animation: 5s ease-out 10s 1 forwards deplacement-din;
+    -moz-animation: 5s ease-out 10s 1 forwards deplacement-din;
+    -webkit-animation: 5s ease-out 10s 1 forwards deplacement-din;
+}
+
+/*une Triforce*/
+.prisme{
+    width: var(--cote);
+    height: var(--cote);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform-style: preserve-3d;
+    backface-visibility: visible;    
+}
+
+/*polygones constituants les Triforces*/
+.triangle{
+    width: var(--cote);
+    height: var(--hauteur);
+    background-color: gold;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.flanc{
+    background-color: goldenrod;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.avant{
+    transform: translateZ(var(--milieu));
+}
+
+.arriere{
+    transform: translateZ(calc(var(--milieu) * -1));
+}
+
+.gauche, .droit{
+    width: var(--epaisseur);
+    height: var(--cote);
+    transform-origin: 0 100%;
+}
+
+.gauche{
+    transform: translateZ(var(--milieu)) rotateZ(30deg) rotateY(90deg);
+}
+
+.droit{
+    transform: translateZ(var(--milieu)) translateX(var(--cote)) rotateZ(-30deg) rotateY(90deg);
+}
+
+.bas{
+    width: var(--cote);
+    height: var(--epaisseur);
+    transform-origin: 50% 100%;
+    transform: translateZ(var(--milieu)) rotateX(90deg);
+}
+
+/*pivot des deux premières Triforces*/
+#nayru > .prisme{
+    animation: 2s linear 5s 5 pivot;
+    -o-animation: 2s linear 5s 5 pivot;
+    -moz-animation: 2s linear 5s 5 pivot;
+    -webkit-animation: 2s linear 5s 5 pivot;
+}
+
+#farore > .prisme{
+    animation: 1s linear 10s 5 pivot;
+    -o-animation: 1s linear 10s 5 pivot;
+    -moz-animation: 1s linear 10s 5 pivot;
+    -webkit-animation: 1s linear 10s 5 pivot;
+}
+
+/*contient le flash lumineux*/
+.lumiere{
+    width: var(--cote);
+    height: var(--cote);
+    position: absolute;
+    top: calc(50vh - var(--moitie));
+    left: calc(50% - var(--moitie));
+    animation: .2s linear 16s 5 flash;
+    visibility: hidden;
+}
+
+/*un rayon lumineux*/
+.rai{
+     width: var(--moitie);
+    height: 100vh;
+    background-image: linear-gradient(black, white);
+    position: absolute;
+    left: calc(50% - calc(var(--moitie) / 2));
+    bottom: 50%;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: bottom;
+}
+
+/*les quatre autres*/
+#deuxieme{
+    transform: rotate(72deg);
+}
+
+#troisieme{
+    transform: rotate(144deg);
+}
+
+#quatrieme{
+    transform: rotate(-144deg);
+}
+
+#dernier{
+    transform: rotate(-72deg);
+}
+
+/*les animations*/
+@keyframes pivot{
+    from{transform: rotateY(0)}
+    to{transform: rotateY(360deg)}
+}
+
+@-o-keyframes pivot{
+    from{transform: rotateY(0)}
+    to{transform: rotateY(360deg)}
+}
+
+@-moz-keyframes pivot{
+    from{transform: rotateY(0)}
+    to{transform: rotateY(360deg)}
+}
+
+@-webkit-keyframes pivot{
+    from{transform: rotateY(0)}
+    to{transform: rotateY(360deg)}
+}
+
+@keyframes deplacement-nayru{
+    from {
+        left: 0;
+        top: 0;
+        transform: scale(0) rotateZ(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: calc(50% - var(--cote));
+        transform: scale(1) rotateZ(720deg);
+    }
+}
+
+@-o-keyframes deplacement-nayru{
+    from {
+        left: 0;
+        top: 0;
+        transform: scale(0) rotateZ(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: calc(50% - var(--cote));
+        transform: scale(1) rotateZ(720deg);
+    }
+}
+
+@-moz-keyframes deplacement-nayru{
+    from {
+        left: 0;
+        top: 0;
+        transform: scale(0) rotateZ(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: calc(50% - var(--cote));
+        transform: scale(1) rotateZ(720deg);
+    }
+}
+
+@-webkit-keyframes deplacement-nayru{
+    from {
+        left: 0;
+        top: 0;
+        transform: scale(0) rotateZ(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: calc(50% - var(--cote));
+        transform: scale(1) rotateZ(720deg);
+    }
+}
+
+@keyframes deplacement-farore{
+    from {
+        left: 75%;
+        top: calc(var(--cote) + 100vh);
+        transform: scale(10) rotateX(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: 50%;
+        transform: scale(1) rotateX(720deg);
+    }
+}
+
+@-o-keyframes deplacement-farore{
+    from {
+        left: 75%;
+        top: calc(var(--cote) + 100vh);
+        transform: scale(10) rotateX(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: 50%;
+        transform: scale(1) rotateX(720deg);
+    }
+}
+
+@-moz-keyframes deplacement-farore{
+    from {
+        left: 75%;
+        top: calc(var(--cote) + 100vh);
+        transform: scale(10) rotateX(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: 50%;
+        transform: scale(1) rotateX(720deg);
+    }
+}
+
+@-webkit-keyframes deplacement-farore{
+    from {
+        left: 75%;
+        top: calc(var(--cote) + 100vh);
+        transform: scale(10) rotateX(0);
+    }
+    to{
+        top: calc(50vh - var(--delta));
+        left: 50%;
+        transform: scale(1) rotateX(720deg);
+    }
+}
+
+@keyframes deplacement-din{
+    from {
+        left: calc(50% - var(--moitie));
+        top: calc(-1px - var(--cote));
+        transform: rotateY(0);
+    }
+    to{
+        top: calc(50vh - var(--cote));
+        left: calc(50% - var(--moitie));
+        transform: rotateY(720deg);
+    }
+}
+
+@-o-keyframes deplacement-din{
+    from {
+        left: calc(50% - var(--moitie));
+        top: calc(-1px - var(--cote));
+        transform: rotateY(0);
+    }
+    to{
+        top: calc(50vh - var(--cote));
+        left: calc(50% - var(--moitie));
+        transform: rotateY(720deg);
+    }
+}
+
+@-moz-keyframes deplacement-din{
+    from {
+        left: calc(50% - var(--moitie));
+        top: calc(-1px - var(--cote));
+        transform: rotateY(0);
+    }
+    to{
+        top: calc(50vh - var(--cote));
+        left: calc(50% - var(--moitie));
+        transform: rotateY(720deg);
+    }
+}
+
+@-webkit-keyframes deplacement-din{
+    from {
+        left: calc(50% - var(--moitie));
+        top: calc(-1px - var(--cote));
+        transform: rotateY(0);
+    }
+    to{
+        top: calc(50vh - var(--cote));
+        left: calc(50% - var(--moitie));
+        transform: rotateY(720deg);
+    }
+}
+
+/*clignotement du fond*/
+@keyframes activation{
+    from{background-color: black;}
+    to {background-color: white;}
+}
+
+@-o-keyframes activation{
+    from{background-color: black;}
+    to {background-color: white;}
+}
+
+@-moz-keyframes activation{
+    from{background-color: black;}
+    to {background-color: white;}
+}
+
+@-webkit-keyframes activation{
+    from{background-color: black;}
+    to {background-color: white;}
+}
+
+/*animation du flash*/
+@keyframes flash{
+    from{
+        visibility: visible;
+        transform: rotate(0deg);}
+    to{
+        visibility: visible;
+        transform: rotate(72deg);
+    }
+}
+
+@-o-keyframes flash{
+    from{
+        visibility: visible;
+        transform: rotate(0deg);}
+    to{
+        visibility: visible;
+        transform: rotate(72deg);
+    }
+}
+
+@-moz-keyframes flash{
+    from{
+        visibility: visible;
+        transform: rotate(0deg);}
+    to{
+        visibility: visible;
+        transform: rotate(72deg);
+    }
+}
+
+@-webkit-keyframes flash{
+    from{
+        visibility: visible;
+        transform: rotate(0deg);}
+    to{
+        visibility: visible;
+        transform: rotate(72deg);
+    }
+}
+
+/*dégradés du fond*/
+
+@keyframes lumiere-blanche{
+    0%{background-image: radial-gradient(white, black 0%)}
+    10%{background-image: radial-gradient(white, black 10%)}
+    20%{background-image: radial-gradient(white, black 20%)}
+    30%{background-image: radial-gradient(white, black 30%)}
+    40%{background-image: radial-gradient(white, black 40%)}
+    50%{background-image: radial-gradient(white, black 50%)}
+    60%{background-image: radial-gradient(white, black 60%)}
+    70%{background-image: radial-gradient(white, black 70%)}
+    80%{background-image: radial-gradient(white, black 80%)}
+    90%{background-image: radial-gradient(white, black 90%)}
+    100%{background-image: radial-gradient(white, black 100%)}
+}
+
+@-o-keyframes lumiere-blanche{
+    0%{background-image: radial-gradient(white, black 0%)}
+    10%{background-image: radial-gradient(white, black 10%)}
+    20%{background-image: radial-gradient(white, black 20%)}
+    30%{background-image: radial-gradient(white, black 30%)}
+    40%{background-image: radial-gradient(white, black 40%)}
+    50%{background-image: radial-gradient(white, black 50%)}
+    60%{background-image: radial-gradient(white, black 60%)}
+    70%{background-image: radial-gradient(white, black 70%)}
+    80%{background-image: radial-gradient(white, black 80%)}
+    90%{background-image: radial-gradient(white, black 90%)}
+    100%{background-image: radial-gradient(white, black 100%)}
+}
+@-moz-keyframes lumiere-blanche{
+    0%{background-image: radial-gradient(white, black 0%)}
+    10%{background-image: radial-gradient(white, black 10%)}
+    20%{background-image: radial-gradient(white, black 20%)}
+    30%{background-image: radial-gradient(white, black 30%)}
+    40%{background-image: radial-gradient(white, black 40%)}
+    50%{background-image: radial-gradient(white, black 50%)}
+    60%{background-image: radial-gradient(white, black 60%)}
+    70%{background-image: radial-gradient(white, black 70%)}
+    80%{background-image: radial-gradient(white, black 80%)}
+    90%{background-image: radial-gradient(white, black 90%)}
+    100%{background-image: radial-gradient(white, black 100%)}
+}
+
+@-webkit-keyframes lumiere-blanche{
+    0%{background-image: radial-gradient(white, black 0%)}
+    10%{background-image: radial-gradient(white, black 10%)}
+    20%{background-image: radial-gradient(white, black 20%)}
+    30%{background-image: radial-gradient(white, black 30%)}
+    40%{background-image: radial-gradient(white, black 40%)}
+    50%{background-image: radial-gradient(white, black 50%)}
+    60%{background-image: radial-gradient(white, black 60%)}
+    70%{background-image: radial-gradient(white, black 70%)}
+    80%{background-image: radial-gradient(white, black 80%)}
+    90%{background-image: radial-gradient(white, black 90%)}
+    100%{background-image: radial-gradient(white, black 100%)}
+}
+
+@keyframes lumiere-coloree{
+    0%{background-image: radial-gradient(indigo, white, black)}
+    10%{background-image: radial-gradient(navy, indigo, white, black)}
+    20%{background-image: radial-gradient(blue, navy, indigo, white, black)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, white, black)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
+
+@-o-keyframes lumiere-coloree{
+    0%{background-image: radial-gradient(indigo, white, black)}
+    10%{background-image: radial-gradient(navy, indigo, white, black)}
+    20%{background-image: radial-gradient(blue, navy, indigo, white, black)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, white, black)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
+
+@-moz-keyframes lumiere-coloree{
+    0%{background-image: radial-gradient(indigo, white, black)}
+    10%{background-image: radial-gradient(navy, indigo, white, black)}
+    20%{background-image: radial-gradient(blue, navy, indigo, white, black)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, white, black)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
+
+@-webkit-keyframes lumiere-coloree{
+    0%{background-image: radial-gradient(indigo, white, black)}
+    10%{background-image: radial-gradient(navy, indigo, white, black)}
+    20%{background-image: radial-gradient(blue, navy, indigo, white, black)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, white, black)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, white, black)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, white)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
+
+@keyframes arc-en-ciel{
+    0%{background-image: radial-gradient(indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy)}
+    10%{background-image: radial-gradient(navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue)}
+    20%{background-image: radial-gradient(blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
+
+@-o-keyframes arc-en-ciel{
+    0%{background-image: radial-gradient(indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy)}
+    10%{background-image: radial-gradient(navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue)}
+    20%{background-image: radial-gradient(blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
+
+@-moz-keyframes arc-en-ciel{
+    0%{background-image: radial-gradient(indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy)}
+    10%{background-image: radial-gradient(navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue)}
+    20%{background-image: radial-gradient(blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
+
+@-webkit-keyframes arc-en-ciel{
+    0%{background-image: radial-gradient(indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy)}
+    10%{background-image: radial-gradient(navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue)}
+    20%{background-image: radial-gradient(blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise)}
+    30%{background-image: radial-gradient(turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen, lightseagreen)}
+    40%{background-image: radial-gradient(lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green, seagreen)}
+    50%{background-image: radial-gradient(seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow, green)}
+    60%{background-image: radial-gradient(green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow, greenyellow)}
+    70%{background-image: radial-gradient(greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered, yellow)}
+    80%{background-image: radial-gradient(yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red, orangered)}
+    90%{background-image: radial-gradient(orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo, red)}
+    100%{background-image: radial-gradient(red, orangered, yellow, greenyellow, green, seagreen, lightseagreen, turquoise, blue, navy, indigo)}
+}
