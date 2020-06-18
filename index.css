@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{background-color: lightcyan}
+
+h1{
+    text-shadow: teal 0.1em 0.1em 0.2em;
+    text-align: center;
+    padding: .5em;
+    font-size: 5em;
+}
+
+summary, a{
+    height: 2em;
+    line-height: 2em;
+    width: 16em;
+    padding: auto;
+    padding-left: 1em;
+    color: lightcyan;
+}
+
+summary:hover, summary:focus{
+    font-weight: bold;
+}
+
+li{list-style: none}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-image: linear-gradient(lightseagreen, mediumaquamarine);
+    background-clip: border-box;
+    transition: 1s;
+    -o-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+}
+
+a:hover, a:focus{
+    
+    font-weight: bold;
+    filter: invert(1);    
+}
+
+nav > details > summary{background-image: linear-gradient(teal, darkcyan)}
+
+nav > details > ul > li > details > summary{background-image: linear-gradient(darkcyan, lightseagreen)}
