@@ -18,13 +18,21 @@ switch (nomPage){
 let numero = 1;
 cadrePhoto.src = `${emplacement}${numero}.jpg`;
 
-function defile() {
-    numero += 1;
-    cadrePhoto.src = `${emplacement}${numero}.jpg`;
-    console.log(numero);
-    console.log(emplacement);
-    console.log(`${emplacement}${numero}.jpg`);
+let debut = null;
+let valeur;
+function defile(moment) {
+    if (!debut) {debut = moment}
+    let maintenant = moment - debut;
+    if (maintenant > 2000){
+        numero += 1;
+        cadrePhoto.src = `${emplacement}${numero}.jpg`;
+        console.log(numero);
+        console.log(emplacement);
+        console.log(`${emplacement}${numero}.jpg`);
+        debut = null;
+    }
     if (numero == max) numero = 0;
+    valeur=window.requestAnimationFrame(defile);
 }
 
-let timer = window.setInterval('defile()', 2000);
+valeur = window.requestAnimationFrame(defile);
