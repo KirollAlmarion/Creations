@@ -92,17 +92,22 @@ figure{
     margin: 0.5em;
 }
 
-.imgG, .imgD, .imgC .txtD, txtG{
-    display: inline;
+.imgG, .imgD, .imgC .txtD, .txtG{
+    /*display: inline;*/
     margin: 0.5em;
+}
+
+.imgG, .imgD{
+    flex: 1 0 1;
 }
 
 /*.txtG{
     text-align: right;
 }*/
 
-.txtD, txtG{
-    max-width: 65%;
+.txtD, .txtG{
+    /*max-width: 65%;*/
+    flex: 2 4 0;
     padding: 1em;
 }
 
@@ -301,11 +306,14 @@ h1{
 
 /*----------Mise en forme du bandeau de navigation-----------*/
 #bandeau{
-        background-color:#006600;
-        border-radius: 5px;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;        
+    background-color:#006600;
+    border-radius: 5px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
     }
 
 /*----------Mise en forme du carrousel----------*/
@@ -414,6 +422,10 @@ h1{
     align-items: center;
 }
 
+.demo > figure{
+    margin: 1em 0;
+}
+
 .demo > figure > figcaption{
     text-align: center;
 }
@@ -448,8 +460,13 @@ h1{
 }
 
 /*----------Mise en forme des contacts----------*/
+.staff, address{
+    /*max-width: 65%;*/
+    flex: 2 4 1;
+    padding: 1em;
+}
+
 main > article > section > dl{
-	font-size: 2em;
 	color: black;
 }
 
@@ -511,7 +528,7 @@ main > article > section > dl > dt:after{
 @media screen and (min-width:768px) {
     /*----------Mise en forme globale----------*/
     h2{font-size: 3em}
-    h3, p{font-size: 2em}
+    h3, p, dl{font-size: 2em}
     .titres{padding: 2em;font-size: 2em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 12em}
@@ -521,8 +538,7 @@ main > article > section > dl > dt:after{
     nav {
         
         display: flex;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;        
     }
 
     nav a {
@@ -548,7 +564,7 @@ main > article > section > dl > dt:after{
         text-decoration: underline;
     }
     
-    #deplie, #replie{
+    #deplie, #replie, .titre-mini{
         display:none;
     }
     
@@ -584,6 +600,14 @@ main > article > section > dl > dt:after{
     /*----------Mise en forme du menu principal----------*/
     #deplie, #replie{
         font-size: 2em;
+    }
+    
+    .titre-mini{
+        font-size: 1.5em;
+        color: #ffdd44;
+        font-family: sans-serif;
+        margin: auto;
+        z-index: 1;
     }
     
     #bandeau > a{
@@ -625,7 +649,7 @@ main > article > section > dl > dt:after{
 @media screen and (min-width:575px) and (max-width:767px){
     /*----------Mise en forme globale----------*/
     h2{	font-size: 2.5em}
-    h3, p{font-size: 1.5em}
+    h3, p, dl{font-size: 1.5em}
     .titres{padding: 1.5em;font-size: 1.5em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 10em}
@@ -637,7 +661,7 @@ main > article > section > dl > dt:after{
 @media screen and (max-width:575px){
     /*----------Mise en forme globale----------*/
     h2{	font-size: 1.5em}
-    h3, p{font-size: 1em}
+    h3, p, dl{font-size: 1em}
     .titres{padding: 1em;font-size: 1em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 6em}
