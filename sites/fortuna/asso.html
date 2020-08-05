@@ -13,7 +13,15 @@
 	<header>		
 			<div id="caselogo">
 			    <figure>
-			    <a class="retour" href="contact.html"><img src="inc/img/logo.png" alt="Logo" title="Sors salutis"></a>
+			    <a class="retour" href="contact.html">
+			        <img srcset="inc/img/logo-micro.png 32w,
+                                 inc/img/logo-mini.png 72w,
+                                 inc/img/logo.png 171w"
+                         sizes="(max-width: 575px) 32px,
+                                (max-width: 991px) 72px,
+                                171px"
+			             src="inc/img/logo.png" alt="Logo" title="Sors salutis">
+			    </a>
 			    <figcaption><a class="retour" href="contact.html">Contacts</a></figcaption>
 			    </figure>
 			</div>
@@ -64,11 +72,41 @@
         </p>   
         <p>Des fêtes historiques aux évènements privés, en passant par des créations sur scènes, l'aventure continue pour notre plaisir et surtout pour notre public.</p>
 	</article>
-    <figure id="banniere"><img src="./inc/img/banniere-fortuna.png" alt="Bannière Fortuna"></figure>
-    <figure id="heaume"><img src="./inc/img/heaume.jpg" alt="Heaume et épée médiévale"></figure>
-    <figure id="danseuse"><img class="ovale" src="./inc/img/danseuse.jpg" alt="Danseuse vue de haut"></figure>
-    <figure id="coquille"><img src="./inc/img/coquille.jpg" alt="Coquille de rapière"></figure>
-    <figure id="rose"><img class="ovale" src="./inc/img/rose.jpg" alt="Gentleman à la rose"></figure>
+    <figure id="banniere">
+        <img srcset="inc/img/banniere-fortuna-micro.png 40w,
+                     inc/img/banniere-fortuna.png 160w"
+             sizes="(max-width: 575px) 40px,
+                    160px"
+             src="./inc/img/banniere-fortuna.png" alt="Bannière Fortuna">
+    </figure>
+    <figure id="heaume">
+        <img srcset="inc/img/heaume-micro.jpg 40w,
+                     inc/img/heaume.jpg 160w"
+             sizes="(max-width: 575px) 40px,
+                    160px"
+             src="./inc/img/heaume.jpg" alt="Heaume et épée médiévale">
+    </figure>
+    <figure id="danseuse">
+        <img srcset="inc/img/danseuse-micro.jpg 40w,
+                     inc/img/danseuse.jpg 160w"
+             sizes="(max-width: 575px) 40px,
+                    160px"
+             class="ovale" src="./inc/img/danseuse.jpg" alt="Danseuse vue de haut">
+    </figure>
+    <figure id="coquille">
+        <img srcset="inc/img/coquille-micro.jpg 40w,
+                     inc/img/coquille.jpg 160w"
+             sizes="(max-width: 575px) 40px,
+                    160px"
+             src="./inc/img/coquille.jpg" alt="Coquille de rapière">
+    </figure>
+    <figure id="rose">
+        <img srcset="inc/img/rose-micro.jpg 40w,
+                     inc/img/rose.jpg 160w"
+             sizes="(max-width: 575px) 40px,
+                    160px"
+             class="ovale" src="./inc/img/rose.jpg" alt="Gentilhomme à la rose">
+    </figure>
     </main>
 	<footer>
 	</footer>

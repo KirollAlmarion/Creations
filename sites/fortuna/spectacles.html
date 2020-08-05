@@ -12,7 +12,15 @@
 	<header>       
             <div id="caselogo">
 			    <figure>
-			    <a class="retour" href="contact.html"><img src="inc/img/logo.png" alt="Logo" title="Sors salutis"></a>
+			    <a class="retour" href="contact.html">
+			        <img srcset="inc/img/logo-micro.png 32w,
+                                 inc/img/logo-mini.png 72w,
+                                 inc/img/logo.png 171w"
+                         sizes="(max-width: 575px) 32px,
+                                (max-width: 991px) 72px,
+                                171px"
+			             src="inc/img/logo.png" alt="Logo" title="Sors salutis">
+			    </a>
 			    <figcaption><a class="retour" href="contact.html">Contacts</a></figcaption>
 			    </figure>
 			</div>
@@ -58,23 +66,53 @@
 	</article>
     <section class="demo">
            <figure>
-                <a href="spec-med.html"><img class="exemple" src="inc/img/spec-med-petit.jpg" alt="Camp médiéval"></a>
+                <a href="spec-med.html">
+                    <img srcset="inc/img/spec-med-micro.jpg 216w,
+                                inc/img/spec-med-petit.jpg 479w"
+                         sizes="(max-width: 575px) 216px,
+                                479px"
+                         src="inc/img/spec-med-petit.jpg" class="exemple" alt="Camp médiéval">
+                </a>
                 <figcaption>Epoque médiévale</figcaption>
            </figure>
            <figure>
-                <a href="spec-grd.html"><img class="exemple" src="inc/img/spec-grd-petit.jpg" alt="Duel de mousquetaires"></a>
+                <a href="spec-grd.html">
+                    <img  srcset="inc/img/spec-grd-micro.jpg 103w,
+                                inc/img/spec-grd-petit.jpg 231w"
+                        sizes="(max-width: 575px) 103px,
+                                231px"
+                        class="exemple" src="inc/img/spec-grd-petit.jpg" alt="Mousquetaires galants">
+                </a>
                 <figcaption>Grand siècle</figcaption>
            </figure>
            <figure>
-                <a href="spec-lumieres.html"><img class="exemple" src="inc/img/spec-lumieres-petit.jpg" alt="Duel au fleuret"></a>
+                <a href="spec-lumieres.html">
+                    <img  srcset="inc/img/spec-lumieres-micro.jpg 119w,
+                                inc/img/spec-lumieres-petit.jpg 267w"
+                        sizes="(max-width: 575px) 119px,
+                                267px"
+                        class="exemple" src="inc/img/spec-lumieres-petit.jpg" alt="Duel au fleuret">
+                </a>
                 <figcaption>Le siècle des Lumières</figcaption>
            </figure>
            <figure>
-                <a href="spec-autres.html"><img class="exemple" src="inc/img/spec-autres-petit.jpg" alt="Belles dames sur l'herbe"></a>
+                <a href="spec-autres.html">
+                    <img  srcset="inc/img/spec-autres-micro.jpg 113w,
+                                inc/img/spec-autres-petit.jpg 252w"
+                        sizes="(max-width: 575px) 113px,
+                                252px"
+                        class="exemple" src="inc/img/spec-autres-petit.jpg" alt="Belles dames sur l'herbe">
+                </a>
                 <figcaption>Autres époques</figcaption>
            </figure>
            <figure>
-                <a href="spec-scene.html"><img class="exemple" src="inc/img/spec-scene-petit.jpg" alt="Personnages masqués sur une estrade"></a>
+                <a href="spec-scene.html">
+                    <img  srcset="inc/img/spec-scene-micro.jpg 189w,
+                                inc/img/spec-scene-petit.jpg 423w"
+                        sizes="(max-width: 575px) 189px,
+                                423px"
+                    class="exemple" src="inc/img/spec-scene-petit.jpg" alt="Le chevalier blanc intervient">
+                </a>
                 <figcaption>La scène</figcaption>
            </figure>
     </section>

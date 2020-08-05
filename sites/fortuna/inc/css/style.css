@@ -81,7 +81,7 @@ figure{
     flex-wrap: wrap;
     justify-content: flex-start;
 	align-items: center;
-    margin: 0.5em;
+    margin: 0.5em auto;
 }
 
 .txtImgTxt{
@@ -89,12 +89,12 @@ figure{
     flex-wrap: wrap;
     justify-content: space-around;
 	align-items: center;
-    margin: 0.5em;
+    margin: 0.5em auto;
 }
 
 .imgG, .imgD, .imgC .txtD, .txtG{
     /*display: inline;*/
-    margin: 0.5em;
+    margin: 0.5em auto;
 }
 
 .imgG, .imgD{
@@ -112,7 +112,7 @@ figure{
 }
 
 .txtD{
-    text-align: left;
+    text-align: justify;
 }
 
 hr {
@@ -179,7 +179,7 @@ header{
 }
 
 h1{
-	color: --txt-coul;
+	color: var(--txt-coul);
     width: var(--largeur);
     font-weight: normal;
     text-align: center;
@@ -191,7 +191,7 @@ h1{
 	font-family: 'gondola_sdregular';
 	padding: 0;
 	margin: 0;
-	color: --txt-coul;
+	color: var(--txt-coul);
 }
 
 
@@ -319,8 +319,8 @@ h1{
 /*----------Mise en forme du carrousel----------*/
 .carrousel{
 	margin: 1em auto;
-    height: 50vh;
-    max-height: 471px;
+    /*height: 50vh;
+    max-height: 471px;*/
     border: 10px inset linen;
 }
 
@@ -431,9 +431,7 @@ h1{
 }
 
 .exemple{
-	margin: 0.5%;
 	border: 5px groove #995D43;
-	height: 11em;
 }
 
 /*----------Mise en forme de l'actualité----------*/
@@ -663,8 +661,9 @@ main > article > section > dl > dt:after{
     h2{	font-size: 1.5em}
     h3, p, dl{font-size: 1em}
     .titres{padding: 1em;font-size: 1em}
+    .carrousel{border: none}
     /*----------Mise en forme du header----------*/
-    #casetitre > p:first-child{font-size: 6em}
-    #devise{font-size: 1.5em}
-    header figcaption{font-size: .5em}
+    #casetitre > p:first-child{font-size: 4em}
+    #devise{font-size: 1em}
+    header figcaption{font-size: .3em}
 }
