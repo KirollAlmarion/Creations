@@ -5,8 +5,9 @@ main {
     grid-gap: .5em;
 }
 
-figure{
+main ~ figure{
     text-align: center;
+    margin: 1em;
 }
 
 .ovale{

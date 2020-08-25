@@ -3,9 +3,27 @@
 <head>
 	<meta charset="utf-8">
 	<title>L'actualité de Fortuna</title>
-    <meta name="description" content="Fortuna, association d'évocation historique">
+    <meta name="author" content="Julien Bouchoux">
+    <meta name="description" content="Actualité de Fortuna, association d'évocation historique. Nos interventions sont ludiques et en constante interaction avec le public : animation de soirées privées ou organisation d'événements publics, seuls ou en coordination avec nos partenaires.">
     <link rel="stylesheet" href="inc/css/style.css">
+    <!-- troisième-génération iPad avec haute-résolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="inc/img/logo-apple-144.png">
+    <!-- iPhone avec haute-résolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="inc/img/logo-apple-114.png">
+    <!-- iPad de première et deuxième génération : -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="inc/img/logo-apple-72.png">
+    <!-- iPhone non-Retina, iPod Touch et appareils Android 2.1+: -->
+    <link rel="apple-touch-icon-precomposed" href="inc/img/logo-apple-57.png">
+    <!-- favicône de base -->
     <link rel="icon" href="inc/img/icone.png" type="image/png" sizes="32x32" />
+    <!-- icône de lancement sur iOS -->
+    <link rel="apple-touch-startup-image" href="inc/img/logo-apple-144.png">
+    <!-- métadonnées pour les réseaux sociaux -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="inc/img/logo-grand.png">
+    <meta property="og:title" content="Fortuna">
+    <meta property="og:description" content="Fortuna, association d'évocation historique.">
+    <meta property="og:locale" content="fr_FR" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
@@ -41,32 +59,40 @@
         <p class="titre-mini">Actualités</p>
 	    <nav id="menu">
            	<a href="#deplie"><i id="replie">&equiv;</i></a>	
-            <a href="asso.html">L'association</a>
+            <a href="index.html">L'association</a>
             <a href="spectacles.html">Spectacles</a>
             <a href="stages.html">Stages</a>
             <a href="actu.html">Actualités</a>
-            <a href="historique.html">Historique</a>
             <a href="contact.html">Contacts</a>
             <a href="legal.html">Mentions légales</a>
             <a href="plan.html">Plan du site</a>        
 	    </nav>
 	</section>
 	<main>
-	<section>
-		<p class="para">
-			Les mousquetaires fourbissent leurs armes et se préparent à investir les Invalides, dès que le confinement sera levé.
-		</p>	
-		<img class="photo" src="inc/img/anim-invalides.jpg" alt="Mousquetaires aux Invalides" title="Mousquetaires aux Invalides">		
+	<section class="txtEtImg">
+        <article class="txtG">
+	        <h2 id="titre0"></h2>
+		    <p id="sous-titre0"></p>
+		    <p id="descriptif0"></p>
+		    <p id="date0"></p>	
+        </article>
+        <figure class="imgD">
+            <img id="photo0" class="photo" src="" alt="">
+        </figure>
 	</section>
 	<hr>
-	<section>
-		<img class="photo" src="inc/img/olympe.jpg" alt="Olympe de Gouges dessinée à la mine de plomb" title="Olympe de Gouges">
-		<p class="para">
-			Après <em>Julie de Maupin</em>, Fortuna prépare pour la journée internationale des droits de la femme 2021 sa dernière création portant sur Olympe de Gouges.
-		</p>
+	<section class="txtEtImg">
+        <figure class="imgG">
+            <img id="photo1" class="photo" src="" alt="">
+        </figure>
+        <article class="txtD">
+	        <h2 id="titre1"></h2>
+		    <p id="sous-titre1"></p>
+		    <p id="descriptif1"></p>
+		    <p id="date1"></p>
+        </article>
 	</section>
 	</main>
-	<footer>
-	</footer>
+	<script src="inc/scripts/actu.js"></script>
 </body>
 </html>
