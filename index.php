@@ -19,7 +19,7 @@
                   <summary>Cubes</summary>
                       <ul>
                           <li><a href="3d/cubes/dice.html" target="new">Dé</a></li>
-                          <li><a href="3d/cubes/dice-spin.html" target="new">Dé qui pivote</a></li>
+                          <li><a href="3d/cubes/dice-spin.html" target="new2">Dé qui pivote</a></li>
                       </ul>
                   </details>
               </li>
@@ -73,12 +73,13 @@
             <summary>Miscellanées</summary>
             <ul>
                 <li><a href="miscellanees/vague1/vague.html" target="new">Vague</a></li>
+                <li><a href="https://kirollalmarion.github.io" target="new">Solides de Platon</a></li>
             </ul>
         </details>
         <details>
             <summary>Sites</summary>
             <ul>
-                <li><a href="" target="new">Fortuna</a></li>
+                <li><a href="http://www.association-fortuna.com/index.html" target="new">Fortuna</a></li>
                 <li><a href="" target="new">Cuir</a></li>
             </ul>
         </details>
