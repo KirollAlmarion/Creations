@@ -123,6 +123,12 @@ hr:after {
     padding: 1em;
 }
 
+noscript{
+    color: gray;
+    text-align: center;
+    font-style: italic;
+}
+
 /*----------Mise en forme du header----------*/
 
 header img{
@@ -384,7 +390,7 @@ main > article > section > dl > dt:after{
 @media screen and (min-width:768px) {
     /*----------Mise en forme globale----------*/
     h2{font-size: 3em}
-    h3, p, dl{font-size: 2em}
+    h3, p, dl, noscript{font-size: 2em}
     .titres{padding: 2em;font-size: 2em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 12em}
@@ -486,7 +492,7 @@ main > article > section > dl > dt:after{
 @media screen and (min-width:575px) and (max-width:767px){
     /*----------Mise en forme globale----------*/
     h2{	font-size: 2.5em}
-    h3, p, dl{font-size: 1.5em}
+    h3, p, dl, noscript{font-size: 1.5em}
     .titres{padding: 1.5em;font-size: 1.5em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 10em}
@@ -498,7 +504,7 @@ main > article > section > dl > dt:after{
 @media screen and (max-width:575px){
     /*----------Mise en forme globale----------*/
     h2{	font-size: 1.5em}
-    h3, p, dl{font-size: 1em}
+    h3, p, dl, noscript{font-size: 1em}
     .titres{padding: 1em;font-size: 1em}
     .carrousel{border: none}
     /*----------Mise en forme du header----------*/

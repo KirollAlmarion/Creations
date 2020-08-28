@@ -18,8 +18,8 @@
                  <details>
                   <summary>Cubes</summary>
                       <ul>
-                          <li><a href="3d/cubes/dice.html" target="new">Dé</a></li>
-                          <li><a href="3d/cubes/dice-spin.html" target="new2">Dé qui pivote</a></li>
+                          <li><a href="3d/cubes/dice.html" target="forme">Dé</a></li>
+                          <li><a href="3d/cubes/dice-spin.html" target="forme">Dé qui pivote</a></li>
                       </ul>
                   </details>
               </li>
@@ -27,11 +27,11 @@
                  <details>
                   <summary>Formes complexes</summary>
                       <ul>
-                          <li><a href="3d/complexes/octaedre/octaedre.html" target="new">Octaèdre régulier</a></li>
-                          <li><a href="3d/complexes/pyramide/pyramide.html" target="new">Pyramide à base carrée</a></li>
-                          <li><a href="3d/complexes/pyramide-explo/pyramide-explo.html" target="new">Pyramide qui éclate</a></li>
-                          <li><a href="3d/complexes/tetraedre/tetraedre.html" target="new">Tétraèdre régulier</a></li>
-                          <li><a href="3d/complexes/tetraedre-explo/tetraedre.html" target="new">Tétraèdre qui éclate</a></li>
+                          <li><a href="3d/complexes/octaedre/octaedre.html" target="forme">Octaèdre régulier</a></li>
+                          <li><a href="3d/complexes/pyramide/pyramide.html" target="forme">Pyramide à base carrée</a></li>
+                          <li><a href="3d/complexes/pyramide-explo/pyramide-explo.html" target="forme">Pyramide qui éclate</a></li>
+                          <li><a href="3d/complexes/tetraedre/tetraedre.html" target="forme">Tétraèdre régulier</a></li>
+                          <li><a href="3d/complexes/tetraedre-explo/tetraedre.html" target="forme">Tétraèdre qui éclate</a></li>
                       </ul>
                   </details>
               </li>
@@ -40,7 +40,7 @@
                  <details>
                   <summary>Animations</summary>
                       <ul>
-                          <li><a href="3d/animations/triforce/triforce.html" target="new">Triforce</a></li>
+                          <li><a href="3d/animations/triforce/triforce.html" target="anim">Triforce</a></li>
                       </ul>
                   </details>
               </li>
@@ -53,9 +53,9 @@
                    <details>
                         <summary>Menus burgers</summary>
                         <ul>
-                            <li><a href="elements/menus-burger/burger-vert/burger-vert.html" target="new">Vertical simple</a></li>
-                            <li><a href="elements/menus-burger/burger-vert-croix/burger-vert-croix.html" target="new">Vertical à fermer avec une croix</a></li>
-                            <li><a href="elements/menus-burger/burger-vert-deroul/burger-vert-deroul.html" target="new">Vertical déroulant</a></li>
+                            <li><a href="elements/menus-burger/burger-vert/burger-vert.html" target="element">Vertical simple</a></li>
+                            <li><a href="elements/menus-burger/burger-vert-croix/burger-vert-croix.html" target="element">Vertical à fermer avec une croix</a></li>
+                            <li><a href="elements/menus-burger/burger-vert-deroul/burger-vert-deroul.html" target="element">Vertical déroulant</a></li>
                         </ul>
                     </details>
                 </li>
@@ -63,7 +63,7 @@
                    <details>
                         <summary>Parchemin</summary>
                         <ul>
-                            <li><a href="elements/parchemin/parch-vert-auto/parch.html" target="new">Parchemin vertical automatique</a></li>
+                            <li><a href="elements/parchemin/parch-vert-auto/parch.html" target="element">Parchemin vertical automatique</a></li>
                         </ul>
                     </details>
                 </li>
@@ -72,15 +72,15 @@
         <details>
             <summary>Miscellanées</summary>
             <ul>
-                <li><a href="miscellanees/vague1/vague.html" target="new">Vague</a></li>
-                <li><a href="https://kirollalmarion.github.io" target="new">Solides de Platon</a></li>
+                <li><a href="miscellanees/vague1/vague.html" target="misc">Vague</a></li>
+                <li><a href="https://kirollalmarion.github.io" target="misc">Solides de Platon</a></li>
             </ul>
         </details>
         <details>
             <summary>Sites</summary>
             <ul>
-                <li><a href="http://www.association-fortuna.com/index.html" target="new">Fortuna</a></li>
-                <li><a href="" target="new">Cuir</a></li>
+                <li><a href="http://www.association-fortuna.com/index.html" target="_blank" rel="noopener noreferrer">Fortuna</a></li>
+                <li><a href="" target="#">Cuir</a></li>
             </ul>
         </details>
     </nav>
