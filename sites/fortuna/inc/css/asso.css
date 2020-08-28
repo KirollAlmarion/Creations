@@ -16,7 +16,8 @@ main ~ figure{
 
 article {
 height: 10em;
-text-align: justify;
+text-align: left;
+text-indent: 2em;
   grid-column: 2;
   grid-row: 2;
 }

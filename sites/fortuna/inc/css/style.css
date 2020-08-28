@@ -55,10 +55,14 @@ body {
     padding: 0 5%;
 }
 
-p{color: black}
+p{
+    color: black;
+    font-family: Arial;
+}
 
 article{
-    text-align: justify;
+    text-align: left;
+    text-indent: 2em;
 }
 
 figure{
@@ -390,8 +394,8 @@ main > article > section > dl > dt:after{
 @media screen and (min-width:768px) {
     /*----------Mise en forme globale----------*/
     h2{font-size: 3em}
-    h3, p, dl, noscript{font-size: 2em}
-    .titres{padding: 2em;font-size: 2em}
+    h3, p, dl, noscript{font-size: 1.2em}
+    .titres{padding: 2em;font-size: 1.2em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 12em}
     #devise{font-size: 3em}
@@ -492,8 +496,8 @@ main > article > section > dl > dt:after{
 @media screen and (min-width:575px) and (max-width:767px){
     /*----------Mise en forme globale----------*/
     h2{	font-size: 2.5em}
-    h3, p, dl, noscript{font-size: 1.5em}
-    .titres{padding: 1.5em;font-size: 1.5em}
+    h3, p, dl, noscript{font-size: 1.2em}
+    .titres{padding: 1.5em;font-size: 1.2em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 10em}
     #devise{font-size: 2.5em}
