@@ -45,6 +45,7 @@
 /*----------Mise en forme globale----------*/
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -55,6 +56,10 @@ body {
     padding: 0 5%;
 }
 
+main{
+    margin-top: 1em;
+}
+
 p{
     color: black;
     font-family: Arial;
@@ -63,6 +68,10 @@ p{
 article{
     text-align: left;
     text-indent: 2em;
+}
+
+h1, h2, h3, .annonce{
+    text-indent: 0;
 }
 
 figure{
@@ -106,7 +115,14 @@ figure{
 .txtD, .txtG{
     flex: 2 4 0;
     padding: 1em;
-    text-align: justify;
+}
+
+.txtD{
+    text-align: left;
+}
+
+.txtG{
+    text-align: right;
 }
 
 .indication{
@@ -118,13 +134,9 @@ figure{
 
 hr {
     border: none;
-    text-align: center;
-    /*color: black;*/
-}
-
-hr:after {
-    content: "\02619 \0226C \02767";
-    padding: 1em;
+    height: .5em;
+    margin: .5em;
+    background: url("../img/separateur.svg") center no-repeat;
 }
 
 noscript{
@@ -347,11 +359,18 @@ h1{
 
 .exemple{
 	border: 5px groove #995D43;
+    border-radius: 3px;
 }
 
+.exemple:hover{border: 5px ridge #006600}
+
 /*----------Mise en forme de l'actualité----------*/
-.para{
-    padding: .5em;
+.bientot{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+	align-items: center;
+    margin: 0.5em auto;
 }
 
 .photo{
@@ -366,6 +385,15 @@ h1{
     padding: 1em;
 }
 
+address{
+    font-weight: normal;
+    font-style: normal;
+}
+
+address > p > br:first-of-type{
+    margin-bottom: 1em;
+}
+
 main > article > section > dl{
 	color: black;
 }
@@ -375,7 +403,6 @@ main > article > section > dl > dt{
 }
 
 main > article > section > dl > dd{
-    text-align: right;
     padding-bottom: 1em;
 }
 
@@ -391,10 +418,12 @@ main > article > section > dl > dt:after{
 /*media queries*/
 
 /*grand écran*/
-@media screen and (min-width:768px) {
+@media screen and (max-width: 925px){.carrousel{border: none}}
+@media screen and (min-width:768px){
     /*----------Mise en forme globale----------*/
     h2{font-size: 3em}
-    h3, p, dl, noscript{font-size: 1.2em}
+    h3{font-size: 2em}
+    p, dl, noscript{font-size: 1.2em}
     .titres{padding: 2em;font-size: 1.2em}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 12em}
@@ -496,8 +525,10 @@ main > article > section > dl > dt:after{
 @media screen and (min-width:575px) and (max-width:767px){
     /*----------Mise en forme globale----------*/
     h2{	font-size: 2.5em}
-    h3, p, dl, noscript{font-size: 1.2em}
+    h3{font-size: 1.5em}
+    p, dl, noscript{font-size: 1.2em}
     .titres{padding: 1.5em;font-size: 1.2em}
+    .carrousel{border: none}
     /*----------Mise en forme du header----------*/
     #casetitre > p:first-child{font-size: 10em}
     #devise{font-size: 2.5em}
@@ -508,7 +539,8 @@ main > article > section > dl > dt:after{
 @media screen and (max-width:575px){
     /*----------Mise en forme globale----------*/
     h2{	font-size: 1.5em}
-    h3, p, dl, noscript{font-size: 1em}
+    h3{font-size: 1.2em}
+    p, dl, noscript{font-size: 1em}
     .titres{padding: 1em;font-size: 1em}
     .carrousel{border: none}
     /*----------Mise en forme du header----------*/

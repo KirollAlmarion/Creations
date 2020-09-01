@@ -4,7 +4,7 @@ let pageActuelle = document.URL;
 let nomPage = pageActuelle.slice(0, -5);
 const tranches = nomPage.split('-');
 nomPage = tranches[tranches.length - 1];
-let petitEcran = window.matchMedia('(max-width: 575px)');
+let petitEcran = window.matchMedia('(max-width: 925px)');
 let micro="";
 if (petitEcran.matches){micro="-micro"}
 let cadrePhoto = document.querySelector(".carrousel");
@@ -43,5 +43,5 @@ function defile(moment) {
     valeur=window.requestAnimationFrame(defile);
 }
 
-petitEcran.addEventListener("change", testEcran);
+petitEcran.addListener(testEcran);
 valeur = window.requestAnimationFrame(defile);

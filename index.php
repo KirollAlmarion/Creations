@@ -80,7 +80,7 @@
             <summary>Sites</summary>
             <ul>
                 <li><a href="http://www.association-fortuna.com/index.html" target="_blank" rel="noopener noreferrer">Fortuna</a></li>
-                <li><a href="" target="#">Cuir</a></li>
+                <li><a href="miscellanees/carrousel/index.html" target="_blank">Test carrousel</a></li>
             </ul>
         </details>
     </nav>
