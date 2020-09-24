@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{background-color: lightcyan}
+
+h1{
+    text-shadow: teal 0.1em 0.1em 0.2em;
+    text-align: center;
+    padding: .5em;
+    font-size: 5em;
+}
+
+h2{
+    text-align: center;
+    padding: .5em;
+    font-size: 3em;
+}
+
+header{
+    width: 25vw;
+    color: lightcyan;
+    background-image: linear-gradient(teal, darkcyan);
+    border: 10px ridge chocolate;
+    border-radius: 10px;
+    margin: 1em auto;
+}
+
+.gondole{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em auto;
+}
+
+figure{
+    margin: 1em;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    width: 16em;
+    height: 16em;
+    line-height: 16em;
+}
+
+img{
+    width: 70%;
+    vertical-align: middle;
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+figure:hover >a > img{
+    width: 85%;
+}
+
+figcaption{
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    background-image: linear-gradient(darkcyan, lightseagreen);
+    border: 5px ridge peru;
+    border-left-style: groove;
+    border-top-style: groove;
+    border-radius: 50%;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+figure:hover >figcaption{
+    opacity: 1;
+}

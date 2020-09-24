@@ -11,7 +11,7 @@ let cadrePhoto = document.querySelector(".carrousel");
 let max = 7;
 switch (nomPage){
 	case 'med': max = 10; break;
-	case 'grd': max = 9; break;
+	case 'grd': max = 15; break;
     case 'lumieres': max = 7; break;
     case 'autres': max = 11; break;
     case 'scene': max = 9; break;
@@ -34,9 +34,6 @@ function defile(moment) {
     if (maintenant > 2000){
         numero += 1;
         cadrePhoto.src = `${emplacement}${micro}${numero}.jpg`;
-        console.log(numero);
-        console.log(emplacement);
-        console.log(`${emplacement}${micro}${numero}.jpg`);
         debut = null;
     }
     if (numero == max) numero = 0;

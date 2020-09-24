@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: linen;
+}
+
+form{
+    max-width: 1100px;
+    margin: 1em auto;
+    text-align: center;
+}
+
+fieldset{
+    position: relative;
+}
+
+legend{
+    font-size: 2em;
+}
+
+label{
+    display: inline-block;
+    width: 8em;
+    margin: .5em;
+    vertical-align: top;
+    text-align: right;
+}
+
+input{
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+textarea{
+    font-family: sans-serif;
+    font-size: 1em;
+    resize: none;
+}
+
+button{
+    display: block;
+    margin: 1em auto;
+    padding: .5em;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+fieldset > div{
+    position: absolute;
+    padding: .2em;
+    bottom: 3em;
+    left: 1em;
+    font-size: .8em;
+    border: 1px solid peru;
+    background-color: cornsilk;
+    border-radius: 10%;
+}
+
+figure{
+    text-align: center;
+    margin: 2em auto;
+}
+
+@media screen and (max-width:1058px){
+    fieldset > div{
+        display: none;
+    }
+}

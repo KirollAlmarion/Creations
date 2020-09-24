@@ -29,7 +29,7 @@ fetch('inc/scripts/actu.json', {cache: "no-cache"})
                         hour: "numeric",
                         minute: "numeric"                    
                     }
-                    actus[i].date.innerHTML = 'Le ' + `<time datetime=${quand.toJSON()}>` + new Intl.DateTimeFormat('fr-FR', options).format(quand) + '</time>';
+                    actus[i].date.innerHTML = 'Le ' + `<time datetime=${quand.toJSON()}>` + new Intl.DateTimeFormat('fr-FR', options).format(quand) + '.</time>';
                 }                
                 let clefs = Object.keys(actus[i]);
                 for (let j=0; j<3; j++){

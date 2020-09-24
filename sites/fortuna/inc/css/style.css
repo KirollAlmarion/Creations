@@ -373,9 +373,13 @@ h1{
     margin: 0.5em auto;
 }
 
+.bientot > article{
+    width: 100%;
+}
+
 .photo{
 	border: 0px groove #995D43;
-	max-width: 40vw;
+	max-width: 80vw;
 	margin: 1em;
 }
 
