@@ -4,8 +4,7 @@ for (let i=0; i<2; i++){
         actus[i]={
         titre: document.getElementById(`titre${i}`),
         sousTitre: document.getElementById(`sous-titre${i}`),
-        descriptif: document.getElementById(`descriptif${i}`),
-        date: document.getElementById(`date${i}`)
+        descriptif: document.getElementById(`descriptif${i}`)
     }
 }
 
@@ -18,7 +17,7 @@ fetch('inc/scripts/actu.json', {cache: "no-cache"})
                 image.src=`inc/img/actu/actu${i}.jpg`;
                 image.alt="Bientôt par Fortuna";
                 image.style.borderWidth='5px';
-                if (infos[i].date){
+                /*if (infos[i].date){
                     let quand = new Date(infos[i].date);
                     let options = {
                         localeMatcher: "best fit",
@@ -30,7 +29,7 @@ fetch('inc/scripts/actu.json', {cache: "no-cache"})
                         minute: "numeric"                    
                     }
                     actus[i].date.innerHTML = 'Le ' + `<time datetime=${quand.toJSON()}>` + new Intl.DateTimeFormat('fr-FR', options).format(quand) + '.</time>';
-                }                
+                }*/
                 let clefs = Object.keys(actus[i]);
                 for (let j=0; j<3; j++){
                     actus[i][clefs[j]].innerHTML=infos[i][clefs[j]]

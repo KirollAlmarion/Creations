@@ -88,6 +88,10 @@
                 <figcaption>Dégoulinures</figcaption>
             </figure>
             <figure>
+                <a href="miscellanees/disco/disco.html" target="disco"><img src="inc/img/disco.svg" alt="Boule à facettes"></a>
+                <figcaption>Ecran à facettes</figcaption>
+            </figure>
+            <figure>
                 <a href="https://kirollalmarion.github.io" target="_blank" rel="noopener noreferrer"><img src="inc/img/dodecaedre.svg" alt="Dodécaèdre"></a>
                 <figcaption>Solides de Platon</figcaption>
             </figure>

@@ -16,8 +16,6 @@ for (let i = 0; i < max; i++) {
     vague[i].style.height = '5%';
     vague[i].style.width = (100/max) + '%';
     vague[i].style.borderRadius=0;
-    console.log(i);
-    console.log(document.getElementById('cadre'));
     document.getElementById('cadre').appendChild(vague[i]);
     document.getElementById('cadre').lastChild.setAttribute('class', 'barre');
 }
@@ -30,7 +28,7 @@ function monte(index, sommet) {
         let ry = ecart + '%';
         if (index<numMonte){vague[index].style.borderTopLeftRadius=  rx + " " + ry}
         if (index>numMonte){vague[index].style.borderTopRightRadius= rx + " " + ry}
-        if(index=numMonte){vague[index].style.borderTopLeftRadius=vague[index].style.borderTopRightRadius= rx + ' 1%'}
+        if (index=numMonte){vague[index].style.borderTopLeftRadius=vague[index].style.borderTopRightRadius= rx + ' 1%'}
     } 
 }
 //fixe la hauteur du rectangle n°index à la valeur basale de 5% et annule les angles arrondis:

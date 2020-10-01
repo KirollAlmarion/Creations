@@ -5,8 +5,7 @@ for (let i=0; i<2; i++){
         actus[i]={
         titre: document.getElementById(`titre${i}`),
         sousTitre: document.getElementById(`sous-titre${i}`),
-        descriptif: document.getElementById(`descriptif${i}`),
-        date: document.getElementById(`date${i}`)
+        descriptif: document.getElementById(`descriptif${i}`)
     }
 }
 
@@ -15,10 +14,10 @@ fetch('actu.json', {cache: 'no-store'})
     .then(function(infos) {
         for (let i=0; i<2; i++){
             let clefs = Object.keys(actus[i]);
-            for (let j=0; j<4; j++){
+            for (let j=0; j<3; j++){
                 if (j == 2){actus[i][clefs[j]].innerHTML=infos[i][clefs[j]]}
                 else {
-                        if (j==3){
+                        /*if (j==3){
                             let horaire = new Date(infos[i][clefs[j]]);
                             let horaireChaine = horaire.toJSON();
                             let dateChaine = horaireChaine.slice(0, 11);
@@ -30,7 +29,7 @@ fetch('actu.json', {cache: 'no-store'})
                             if (minutes < 10){minutes = '0' + minutes.toString(10)}
                             dateChaine += minutes;
                             infos[i][clefs[j]] = dateChaine;
-                        }
+                        }*/
                         actus[i][clefs[j]].value=infos[i][clefs[j]]
                     }
             }
@@ -45,11 +44,11 @@ formulaire.addEventListener('submit', function(e){
         actus[i].titre = infos.get(`titre${i}`);
         actus[i].sousTitre = infos.get(`sousTitre${i}`);
         actus[i].descriptif = infos.get(`descriptif${i}`);
-        actus[i].date = new Date(infos.get(`date${i}`));
+        /*actus[i].date = new Date(infos.get(`date${i}`));*/
         infos.delete(`titres${i}`);
         infos.delete(`sousTitre${i}`);
         infos.delete(`descriptif${i}`);
-        infos.delete(`date${i}`);
+        /*infos.delete(`date${i}`);*/
     }
     let texte, images;
     texte = fetch('actu.php', {

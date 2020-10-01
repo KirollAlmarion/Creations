@@ -34,8 +34,8 @@
             <input type="text" name="sousTitre0" id="sous-titre0" size="111">
             <label for="descriptif0">Descriptif :</label>
             <textarea name="descriptif0" id="descriptif0" rows="7" cols="114"></textarea>
-            <label for="date0">Date :</label>
-            <input type="datetime-local" name="date0" id="date0">
+            <!--<label for="date0">Date :</label>
+            <input type="datetime-local" name="date0" id="date0">-->
             <label for="photo0">Image :</label>
             <input type="file" name="photo0" id="photo0" accept="image/jpeg">
             <div>
@@ -56,8 +56,8 @@
             <input type="text" name="sousTitre1" id="sous-titre1" size="111">
             <label for="descriptif1">Descriptif :</label>
             <textarea name="descriptif1" id="descriptif1" rows="7" cols="114"></textarea>
-            <label for="date1">Date :</label>
-            <input type="datetime-local" name="date1" id="date1">
+            <!--<label for="date1">Date :</label>
+            <input type="datetime-local" name="date1" id="date1">-->
             <label for="photo1">Image :</label>
             <input type="file" name="photo1" id="photo1" accept="image/jpeg">
             <div>
