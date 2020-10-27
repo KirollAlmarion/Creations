@@ -1,0 +1,17 @@
+  <main>
+    <header>
+      <h1 [style.font-size.px]="tailleH1">Julien Bouchoux</h1>
+      <h2 [style]="styleH2()">Développeur informatique junior, {{age}} ans</h2>
+    </header>
+    <app-bloc [titre]="'Compétences'" [elements]="[analyse, protocole]" [competence]="true"></app-bloc>
+    <app-bloc [titre]="'Informatique'" [elements]="[html, js, react, angular, mongo]" [competence]="true"></app-bloc>
+    <app-bloc [titre]="'Expériences professionnelles'" [elements]="[developpeur, pharmacien, doctorant]" [competence]="false"></app-bloc>
+    <app-bloc [titre]="'Diplômes et formations'" [elements]="[doranco, doctorat]" [competence]="false"></app-bloc>
+  </main>
+  <aside [style.transform]="rotation()">
+    <app-annexe [renseignements]="tousLesRenseignements"></app-annexe>
+    <app-telechargement></app-telechargement>
+  </aside>
+  <div id="menuCouleurs" [style]="styleMenu()">
+    <app-pigment *ngFor="let couleur of couleurs" [couleur]="couleur"></app-pigment>
+  </div>

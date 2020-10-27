@@ -1,0 +1,1 @@
+export const COULEURS: string[] = ["firebrick", "chocolate", "goldenrod", "teal", "mediumturquoise", "mediumorchid"]

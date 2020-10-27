@@ -95,6 +95,10 @@
                 <a href="https://kirollalmarion.github.io" target="_blank" rel="noopener noreferrer"><img src="inc/img/dodecaedre.svg" alt="Dodécaèdre"></a>
                 <figcaption>Solides de Platon</figcaption>
             </figure>
+            <figure>
+                <a href="miscellanees/cv/index.html" target="_blank" rel="noopener noreferrer"><img src="inc/img/cv.svg" alt="Curriculum vitae"></a>
+                <figcaption>Curriculum vitae</figcaption>
+            </figure>
         </div>
     </section>
     <section>

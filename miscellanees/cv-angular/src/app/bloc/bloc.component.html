@@ -1,0 +1,10 @@
+<section [style.margin-top.px]="margeSup">
+    <h3 [style]="styleTitre()">{{titre}}</h3>
+    <div *ngIf="competence; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <app-competence *ngFor="let element of elements" [nomCompetence]="element"></app-competence>
+        </ng-template>
+        <ng-template #elseBlock>
+            <app-accomplissement *ngFor="let element of elements" [nomAccomplissement]="element"></app-accomplissement>
+        </ng-template>
+</section>

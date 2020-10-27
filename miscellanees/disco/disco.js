@@ -33,12 +33,12 @@ function clignote(moment) {
                 let actuel = tableau[i][j].style.left;
                 actuel = parseInt(actuel, 10);
                 if (actuel > -10){
+                    tableau[i][j].style.visibility = "visible";
                     tableau[i][j].style.left = `${actuel - 10}vw`;
-                    tableau[i][j].style.zIndex = 1;
                     
                 } else {
+                    tableau[i][j].style.visibility = "hidden";
                     tableau[i][j].style.left = '100vw';
-                    tableau[i][j].style.zIndex = -1;
                 }
                 
             }

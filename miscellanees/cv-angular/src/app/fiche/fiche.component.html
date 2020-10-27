@@ -1,0 +1,14 @@
+<section [style]="styleFiche()">
+    <h3 [style]="styleTitre()">{{elements[0]}}</h3>
+    <div *ngIf="competence; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <div *ngFor="let element of elements; first as premier">
+                <app-competence *ngIf="!premier" [nomCompetence]="+element"></app-competence>
+            </div>
+        </ng-template>
+        <ng-template #elseBlock>
+            <p [style.font-size.px]="police" *ngFor="let element of elements; first as premier">
+                <span *ngIf="!premier" [innerHTML]="element"></span> 
+            </p>
+        </ng-template>
+</section>

@@ -1,0 +1,29 @@
+figure{
+    display: flex;
+    align-items: center;
+}
+
+div{
+    border-radius: 50%;
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+div > p {
+    display: block;
+    width: 95%;
+    text-align: center;
+    color: white;
+}
+
+figcaption > :last-child{padding-left: 3%}
+
+figcaption{
+    transition: 1s;
+    max-width: 75%;
+}
+
+span{transition: 1s}
