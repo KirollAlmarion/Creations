@@ -1,0 +1,10 @@
+fieldset{
+    width: 8vw;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

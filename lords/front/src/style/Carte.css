@@ -1,0 +1,49 @@
+.fond{
+    width: 15%;
+    max-width: 443px;
+    position: relative;
+}
+
+.photo{
+    width: 100%;
+    border-radius: 5% / 3.25%;
+}
+
+.rang{
+    width: 10%;
+    height: 6.4%;
+    border-radius: 50%;
+    position: absolute;
+    right: 3.9%;
+    top: 2.2%;    
+}
+
+.force{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 25% 16.25%;
+}
+
+.armes{
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 12%;
+    transform: skewY(-20deg);
+    border: solid brown;
+    border-width: thin 0;
+}
+
+.blason{
+    display: block;
+    width: 18%;
+    position: absolute;
+    bottom: 71%;
+    left: 1%;
+}
+
+text{
+    font-family: "Brush Script Std", cursive;
+}
