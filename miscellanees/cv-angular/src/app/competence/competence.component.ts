@@ -15,7 +15,7 @@ export class CompetenceComponent implements OnInit {
   competence: Competence;
   tailleH4 = 0.015 * HAUTEUR;
   epaisseur = 0.005 * HAUTEUR;
-  longueur = .25 * LARGEUR;
+  longueur = .3 * LARGEUR;
   marge = .01 *HAUTEUR;
   styleTotal = `height: ${this.epaisseur}px; width: ${this.longueur}px`;
 

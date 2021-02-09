@@ -14,7 +14,7 @@ export class AccomplissementComponent implements OnInit {
 
   @Input() nomAccomplissement: number;
   accomplissement: Accomplissement;
-  diametre = 0.12 * LARGEUR;
+  diametre = 0.08 * LARGEUR;
   police = 0.012 * HAUTEUR;
 
   constructor(public pigmentsService: PigmentsService, private accomplissementsService: AccomplissementsService, private competencesService: CompetencesService) { }

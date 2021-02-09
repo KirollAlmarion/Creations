@@ -6,14 +6,14 @@ import { listeAccomplissements } from './listeaccomplissements';
   providedIn: 'root'
 })
 export class AccomplissementsService {
-  etats = [false, false, false, false, false];
+  etats = [false, false, false, false, false, false, false];
 
   recupereAccomplissement(indice: number): Accomplissement{
     return listeAccomplissements[indice]
   }
 
   definiEtat(){
-    for (let i=0; i<5;i++){
+    for (let i=0; i<7;i++){
       this.etats[i] = this.recupereAccomplissement(i).actif
     }
   }

@@ -1,25 +1,41 @@
 import { Accomplissement } from './accomplissement';
-import {ANALYSE, PROTOCOLE, HTML, JS, REACT, ANGULAR, MONGO} from './listecompetences';
-//liste des accomplissements utilisés
+import {ANALYSE, PROTOCOLE, HTML, JS, CSHARP, MSSQL, MONGO} from './listecompetences';
+//liste des accomplissements utilisés: expériences et formations
 
-export const DEVELOPPEUR: number = 0,
-             PHARMACIEN: number = 1,
-             DOCTORANT: number = 2,
-             DORANCO: number = 3,
-             DOCTORAT: number = 4,
+export const DEVELOPPEUR : number = 0,
+             WEBMASTER: number = 1,
+             PHARMACIEN: number = 2,
+             DOCTORANT: number = 3,
+             DAWAN: number = 4,
+             DORANCO: number = 5,
+             DOCTORAT: number = 6,
              listeAccomplissements: Accomplissement[] = [
+                {
+                    nom: "Développeur .NET",
+                    cadre: "Dawan",
+                    lieu: "Paris",
+                    descriptif: "Projet de fin de formation:<br>Simulation de co-évolution de trois espèces animales.",
+                    periode: "2020 2021",
+                    actif: false,
+                    competencesLiees: [
+                        {nom: ANALYSE, progression: 10},
+                        {nom: PROTOCOLE, progression: 20},
+                        {nom: JS, progression: 10},
+                        {nom: CSHARP, progression: 40},
+                        {nom: MSSQL, progression: 30}
+                    ]
+                },
                 {
                     nom: "Développeur de site",
                     cadre: "Fortuna",
                     lieu: "Noisy-le-Grand",
                     descriptif: "Création <em>de novo</em> du <a href='http://www.association-fortuna.com' target='_blank' rel='noopener noreferrer'>site</a> de l'association d'évocation historique Fortuna.",
-                    periode: "Depuis avril 2020",
+                    periode: "2020",
                     actif: false,
                     competencesLiees: [
                         {nom: ANALYSE, progression: 10},
-                        {nom: PROTOCOLE, progression: 10},
-                        {nom: HTML, progression: 40},
-                        {nom: JS, progression: 30}
+                        {nom: HTML, progression: 30},
+                        {nom: JS, progression: 20}
                     ]
                 },
                 {
@@ -27,10 +43,11 @@ export const DEVELOPPEUR: number = 0,
                     cadre: "Officines",
                     lieu: "Ile-de-France",
                     descriptif: "Conseil, vente et gestion de stock.",
-                    periode: "De oct. 2009 à oct. 2019",
+                    periode: "2009 2019",
                     actif: false,
                     competencesLiees: [
                         {nom: ANALYSE, progression: 10},
+                        {nom: PROTOCOLE, progression: 10}
                     ]
                 },
                 {
@@ -38,26 +55,36 @@ export const DEVELOPPEUR: number = 0,
                     cadre: "Centre de Recherche des Cordeliers",
                     lieu: "Paris",
                     descriptif: "Analyse, élaboration de modèle, mise au point de protocoles, récolte et interprétation de données, encadrement de stagiaires.",
-                    periode: "De jan. 2005 à sept. 2009",
+                    periode: "2005 2009",
                     actif: false,
                     competencesLiees: [
                         {nom: ANALYSE, progression: 40},
-                        {nom: PROTOCOLE, progression: 90}
+                        {nom: PROTOCOLE, progression: 70}
+                    ]
+                },
+                {
+                    nom: "Développeur .NET",
+                    cadre: "Dawan",
+                    lieu: "Paris",
+                    descriptif: "Acquisition des compétences pour développer des applications en .NET (399 heures).",
+                    periode: "2020 2021",
+                    actif: false,
+                    competencesLiees: [
+                        {nom: CSHARP, progression: 50},
+                        {nom: MSSQL, progression: 30}
                     ]
                 },
                 {
                     nom: "Développeur de site web dynamique",
                     cadre: "Doranco",
                     lieu: "Bagnolet",
-                    descriptif: "Reconversion dans les technologies du numérique.",
-                    periode: "D'avril 2020 à juin 2020",
+                    descriptif: "Reconversion dans les technologies du numérique (280 heures).",
+                    periode: "2020",
                     actif: false,
                     competencesLiees: [
                         {nom: HTML, progression: 50},
-                        {nom: JS, progression: 50},
-                        {nom: REACT, progression: 50},
-                        {nom: ANGULAR, progression: 50},
-                        {nom: MONGO, progression: 40}
+                        {nom: JS, progression: 40},
+                        {nom: MONGO, progression: 30}
                     ]
                 },
                 {
@@ -65,10 +92,10 @@ export const DEVELOPPEUR: number = 0,
                     cadre: "UPMC",
                     lieu: "Paris",
                     descriptif: "Répartition des triglycérides entre stockage et sécrétion dans les cellules entérocytaires : Un mécanisme de contrôle de la sécrétion des lipoprotéines riches en triglycérides ?",
-                    periode: "De jan. 2005 à sept. 2009",
+                    periode: "2005 2009",
                     actif: false,
                     competencesLiees: [
-                        {nom: ANALYSE, progression: 40}
+                        {nom: ANALYSE, progression: 30}
                     ]
                 },
              ];

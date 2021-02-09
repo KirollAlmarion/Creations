@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {PigmentsService} from '../pigments.service';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 
 @Component({
   selector: 'app-telechargement',
+  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}],
   templateUrl: './telechargement.component.html',
   styleUrls: ['./telechargement.component.css']
 })
 export class TelechargementComponent implements OnInit {
   dy = 0;
-  //fichier = `../../assets/cv-${this.pigmentsService.couleurActive()}.pdf`;
+  location: Location;
 
   fichier(): string {
-    return `../../assets/cv-${this.pigmentsService.couleurActive()}.pdf`
+    return `${location.href}assets/cv-${this.pigmentsService.couleurActive()}.pdf`
   }
 
   translation(): string {
@@ -27,7 +29,7 @@ export class TelechargementComponent implements OnInit {
     this.dy = 0;
   }
 
-  constructor(private pigmentsService: PigmentsService) { }
+  constructor(private pigmentsService: PigmentsService, location: Location) { this.location = location;}
 
   ngOnInit(): void {
   }
