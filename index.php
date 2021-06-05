@@ -96,7 +96,7 @@
                 <figcaption>Solides de Platon</figcaption>
             </figure>
             <figure>
-                <a href="miscellanees/cv/index.html" target="_blank" rel="noopener noreferrer"><img src="inc/img/cv.svg" alt="Curriculum vitae"></a>
+                <a href="miscellanees/cv/" target="_blank" rel="noopener noreferrer"><img src="inc/img/cv.svg" alt="Curriculum vitae"></a>
                 <figcaption>Curriculum vitae</figcaption>
             </figure>
         </div>
