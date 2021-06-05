@@ -80,7 +80,7 @@
         </header>
         <div class="gondole">
             <figure>
-                <a href="miscellanees/vague1/vague.html" target="vague"><img src="inc/img/vague.svg" alt="Vague"></a>
+                <a href="miscellanees/vague/vague.html" target="vague"><img src="inc/img/vague.svg" alt="Vague"></a>
                 <figcaption>Vague</figcaption>
             </figure>
             <figure>
