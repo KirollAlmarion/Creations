@@ -99,6 +99,10 @@
                 <a href="miscellanees/cv/" target="_blank" rel="noopener noreferrer"><img src="inc/img/cv.svg" alt="Curriculum vitae"></a>
                 <figcaption>Curriculum vitae</figcaption>
             </figure>
+            <figure>
+                <a href="data/DGSIM.mp4" target="_blank" rel="noopener noreferrer"><img src="inc/img/dgsim.svg" alt="DGSim"></a>
+                <figcaption>DGSim (démo vidéo)</figcaption>
+            </figure>
         </div>
     </section>
     <section>
