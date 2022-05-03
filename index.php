@@ -103,6 +103,10 @@
                 <a href="data/DGSIM.mp4" target="_blank" rel="noopener noreferrer"><img src="inc/img/dgsim.svg" alt="DGSim"></a>
                 <figcaption>DGSim (démo vidéo)</figcaption>
             </figure>
+            <figure>
+                <a href="miscellanees/emopick" target="_blank" rel="noopener noreferrer"><img src="inc/img/loupe_smiley.svg" alt="EmoPick"></a>
+                <figcaption>EmoPick</figcaption>
+            </figure>
         </div>
     </section>
     <section>
