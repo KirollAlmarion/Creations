@@ -38,8 +38,8 @@ a{
 }
 
 article{
-	line-height: 99vh;
-	font-size: 80vh;
+	
+	
 	text-align: center;
 }
 
@@ -57,6 +57,28 @@ article{
 
 	article{
 		height: 100vh;
-		width: 95%;
+		line-height: 99vh;
+		width: 90%;
+		font-size: 80vh;
+	}
+}
+
+@media screen and (orientation:portrait){
+	section{
+		flex-direction: column;
+	}
+
+	nav{
+		flex-direction: row;
+		height: 20vh;
+		width: 100%;
+		overflow-x: scroll;
+	}
+
+	article{
+		height: 80vh;
+		line-height: 79vh;
+		width: 100%;
+		font-size: 35vh;
 	}
 }
