@@ -20,9 +20,9 @@ lister(127904, 127955);
 lister(128000, 128174);
 lister(128286, 128302);
 lister(128506, 128591);
-lister(129292, 129488);
+lister(129292, 129504);
 
-document.onmouseover = function(e){
+function AfficheEmote(e){
 	icones.every(function (item, indice){
 		if (item == e.target){
             lien.innerText=String.fromCodePoint(indice);
@@ -33,5 +33,8 @@ document.onmouseover = function(e){
         {
         	return true;
         }
-	});	
+	});
 }
+
+document.onmouseover = (e)=> AfficheEmote(e);
+document.onclick = (e)=> AfficheEmote(e);

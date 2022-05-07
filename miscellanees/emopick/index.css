@@ -30,6 +30,7 @@ p{
 }
 p:hover{
 	font-size:  4em;
+	cursor:  pointer;
 }
 
 a{
@@ -38,8 +39,6 @@ a{
 }
 
 article{
-	
-	
 	text-align: center;
 }
 
@@ -79,6 +78,6 @@ article{
 		height: 80vh;
 		line-height: 79vh;
 		width: 100%;
-		font-size: 35vh;
+		font-size: 32vh;
 	}
 }
