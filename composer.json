@@ -1,0 +1,8 @@
+{
+  "require" : {
+    "heroku/heroku-buildpack-php": "*"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  }
+}
