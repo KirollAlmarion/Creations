@@ -1,0 +1,23 @@
+<svg version="1.1" baseProfile="full" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="-1 0 102 100">
+    <defs>
+    	<linearGradient id="FonceClair" gradientTransform="rotate(90)">
+            <stop offset="5%"  stop-color="burlywood"/>
+            <stop offset="95%" stop-color="linen"/>
+        </linearGradient>
+        <linearGradient id="ClairFonce" gradientTransform="rotate(90)">
+            <stop offset="5%"  stop-color="linen"/>
+            <stop offset="95%" stop-color="burlywood"/>
+        </linearGradient>
+        <linearGradient id="Tout" gradientTransform="rotate(90)">
+            <stop offset="5%"  stop-color="burlywood"/>
+            <stop offset="50%"  stop-color="linen"/>
+            <stop offset="95%" stop-color="burlywood"/>
+        </linearGradient>
+    	<path id="rebord" d="M 10 0 a 10 10 0 0 1 0 20 H 90 a 10 10 0 0 0 0 -20 Z" />
+    </defs>
+    <g stroke="black" stroke-width="1" stroke-linecap="mitter">
+        <rect x="0" y="0" rx="10" ry="10" width="90" height="100" fill="url('#Tout')" />
+        <use href="#rebord" fill="url('#ClairFonce')" />
+        <use transform="translate(0, 80)" href="#rebord" fill="url('#FonceClair')" />    
+    </g>
+</svg>

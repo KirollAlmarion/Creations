@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{background-color: black}
+
+body{
+    margin: auto;
+    background-color: white;
+    border: 1vh solid white;
+    perspective: 20cm;
+    overflow: hidden;
+}

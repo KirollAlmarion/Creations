@@ -1,0 +1,9 @@
+section{
+    width: 100%;
+    padding: 5%;
+    transition: 1s;
+}
+
+h3{transition: 1s}
+
+p{line-height: normal}

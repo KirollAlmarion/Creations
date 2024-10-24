@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{background-color: gray}
+
+div{
+    position: fixed;
+    transition: background-color 1s linear, left 1s linear;
+}

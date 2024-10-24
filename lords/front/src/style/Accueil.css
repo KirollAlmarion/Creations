@@ -1,0 +1,10 @@
+.portail{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.portail > img {
+    border: .5em ridge sienna;
+}

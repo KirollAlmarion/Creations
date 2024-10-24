@@ -1,0 +1,11 @@
+.presentoir{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="number"]{
+    margin: 1em;
+}

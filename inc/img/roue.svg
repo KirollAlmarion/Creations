@@ -1,0 +1,19 @@
+<svg version="1.1" baseProfile="full" width="205.06561" height="205.07523" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<g id="rayon">
+			<rect y="811.50305" x="1394.0105" height="6.6922607" width="24.36993" id="barre" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.98351228;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"/>
+			<path d="m 1387.6478,808.53449 c 2.3465,-1.59534 5.1187,-0.061 6.1919,3.42694 1.0732,3.48798 0.041,7.60882 -2.3054,9.20416 -1.3288,0.90344 -2.8654,0.8307 -4.1529,-0.19659" id="bout" style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.98351228;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+	        <path d="m 1454.1146,811.09837 c -16.0371,-9.259 -36.3655,0 -36.3655,0 l 0,7.50164 c 0,0 20.3284,9.259 36.3655,0 z" style="fill:gray;fill-opacity:1;stroke:#000000;stroke-width:0.98351228px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" id="fuseau"/>
+    	</g>
+	</defs>
+	<g transform="translate(-223.23379,-547.11444)">
+	<use transform="matrix(1.0338092,0,0,1,-1200.0773,-165.20026)" style="fill:#ffffff" href="#rayon" />
+	<use transform="matrix(-0.5169046,-0.89530503,0.8660254,-0.5,383.0085,2378.4931)" style="fill:#ffffff" href="#rayon" />
+	<use transform="matrix(0.5169046,-0.89530503,0.8660254,0.5,-1142.8354,1563.6439)" style="fill:#ffffff" href="#rayon" />
+	<use transform="matrix(-1.0338092,0,0,-1,1851.6105,1464.4981)" style="fill:#ffffff" href="#rayon" />
+	<use transform="matrix(-0.5169046,0.89530503,-0.8660254,-0.5,1794.3687,-264.34605)" style="fill:#ffffff" href="#rayon" />
+	<use transform="matrix(0.5169046,0.89530503,-0.8660254,0.5,268.5248,-1079.1953)" style="fill:#ffffff" href="#rayon" />
+	<path style="fill:lightgray;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" d="m 305.1985,637.77393 c -6.5584,11.35948 -2.6663,25.88472 8.6931,32.4431 11.3594,6.55838 25.8847,2.66638 32.4431,-8.6931 6.5584,-11.35948 2.6663,-25.88472 -8.6931,-32.4431 -11.3594,-6.55838 -25.8847,-2.66638 -32.4431,8.6931 z m 13.7481,7.9375 c 2.1697,-3.75803 6.9839,-5.02512 10.7418,-2.85534 3.7581,2.16969 5.0408,6.95668 2.8711,10.71471 -2.1697,3.75804 -6.9724,5.06777 -10.7304,2.89808 -3.758,-2.16969 -5.0522,-6.99942 -2.8825,-10.75745 z" id="centre" />
+      <path style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" d="M 414.1283,598.63328 C 385.952,549.83061 323.5536,533.11101 274.751,561.2872 c -48.8027,28.17626 -65.5223,90.57466 -37.3461,139.37738 28.1763,48.80267 90.5747,65.52227 139.3773,37.34608 48.8027,-28.17626 65.5223,-90.57466 37.3461,-139.37738 z m -9.1745,5.2969 c 25.2473,43.72961 10.2455,99.63155 -33.4841,124.87896 -43.7296,25.24729 -99.643,10.28815 -124.8903,-33.44146 -25.2473,-43.72961 -10.2612,-99.65863 33.4684,-124.90592 43.7297,-25.24735 99.6587,-10.26119 124.906,33.46842 z" id="jante" />
+	</g>
+</svg>

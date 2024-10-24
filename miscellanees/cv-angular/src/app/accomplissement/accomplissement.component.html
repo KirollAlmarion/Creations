@@ -1,0 +1,7 @@
+<figure>
+    <div [style]="stylePastille()" (click)="activeAccomplissement()"><p>{{accomplissement.periode}}</p></div>
+    <figcaption [style]="styleTexte()">
+        <p><b>{{accomplissement.nom}}</b> / <span [style.color]="this.pigmentsService.couleurActive()">{{accomplissement.cadre}}</span> {{accomplissement.lieu}}</p>
+        <p [innerHTML]="accomplissement.descriptif"></p>
+    </figcaption>
+</figure>

@@ -1,0 +1,6 @@
+h3{
+    padding: .5%;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    transition: 1s;
+}

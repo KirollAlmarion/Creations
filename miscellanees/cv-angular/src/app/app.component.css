@@ -1,0 +1,23 @@
+main{width: 60%}
+
+h2{transition: 1s}
+
+aside{
+    width: 35%;
+    margin-left: 5%;
+    position: absolute;
+    left: 60%;
+    top: 0;
+    transform-origin: calc(100% + .5vh);
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+#menuCouleurs{
+    position: absolute;
+    left: 60%;
+    bottom: 1vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}

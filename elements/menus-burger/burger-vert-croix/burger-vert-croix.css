@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: grey
+}
+
+/* aucune action de votre part et quand tu btn croix */
+    #ouvrir:not(:target) {
+        right: -100%;
+        transition: right 1.5s
+    }
+
+    /* action ouverture de votre part btn burger */
+    #ouvrir:target {
+        right: 0;
+        transition: right 1s
+    }
+
+    /*article */
+    #ouvrir {
+        overflow: hidden;
+        border: 1px solid black;
+        text-align: center;
+        position: fixed;
+        /*height: 100vh;*/
+        height: 12em;
+        top: 0;
+        width: 80%;
+        max-width: 320px;
+        background: white;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, .2)
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        min-height: 400px;
+        list-style: none;
+    }
+
+    nav ul li {
+        width: 100%;
+        display: block;
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    i.pose {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid grey;
+        border-radius: 10px;
+    }
+
+    i.pose,
+    .fa-bars {
+        visibility: visible
+    }
+
+    header > a {
+        color: red
+    }

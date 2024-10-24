@@ -1,0 +1,47 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 1em;
+}
+
+main ~ figure{
+    text-align: center;
+    margin: 1em;
+}
+
+.ovale{
+    border-radius: 50%;
+}
+
+article {
+height: 10em;
+text-align: left;
+text-indent: 2em;
+  grid-column: 2;
+  grid-row: 1/5;
+}
+
+#banniere {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+#heaume {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#danseuse {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#coquille {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#rose {
+  grid-column: 3;
+  grid-row: 4;
+}
